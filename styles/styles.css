@@ -20,6 +20,10 @@ a {
     text-decoration: none;
 }
 
+ul {
+    list-style: none;
+}
+
 /* Estilos para el header */
 
 header {
@@ -41,7 +45,6 @@ header {
 
 nav ul {
     display: flex;
-    list-style: none;
 }
 
 nav ul li {
@@ -219,6 +222,13 @@ main {
     margin-bottom: 40px;
 }
 
+.separador {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 1em;
+}
+
 /* Estilos para cada producto */
 
 .catalogo-completo article {
@@ -356,17 +366,51 @@ main {
     font-size: 2em;
 }
 
+.paginacion {
+    display: flex;
+    justify-content: center;
+    list-style: none;
+    padding: 0px;
+    margin-bottom: 5%;
+}
+
+.paginacion li a {
+    display: block; /* let links fill the list item */
+    padding: 7px 12px;
+    text-decoration: none;
+    border: 1px solid #d9d7d7;
+    color: #727986;
+    font-size: 0.9em;
+    font-weight: 600;
+    background-color: #FFFFFF;
+    margin: 0 4px;
+    border-radius: 5px;
+}
+
+.paginacion li a.active {
+    background-color: #E64C19;
+    color: white;
+}
+
 
 /* Estilos del footer */
 
 footer {
     background-color: #1C1917;
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
     color: #FFFFFF;
     font-weight: 200;
+}
+
+footer .informacion {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    padding: 2% 17% 2% 17%;
+    align-items: start;
     font-size: 0.9em;
-    padding: 2em 17% 2em 17%;
+}
+
+footer h4 {
+    margin: 0;
 }
 
 footer .redes img {
@@ -381,11 +425,11 @@ footer .redes h4 {
 footer .footer-categorias {
     display: flex;
     flex-direction: column;
-    align-items: center;
+    text-align: left;
+    padding-left: 40%;
 }
 
 footer .footer-categorias ul {
-    list-style: none;
     padding: 0;
 }
 
@@ -401,4 +445,32 @@ footer span {
     font-size: 1em;
     vertical-align: middle;
     margin-right: 0.5em;
+}
+
+footer .contacto ul {
+    padding: 0;
+}
+
+footer .contacto img {
+    width: 70%;
+    border-radius: 20px;
+}
+
+footer .aviso-legal {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 2em;
+    border-top: 1px solid #37312d;
+    font-size: 0.8em;
+}
+
+footer .aviso-legal #copyright {
+    padding-left: 17%;
+}
+
+footer .aviso-legal .avisos-derecha {
+    display: flex;
+    flex-direction: row;
+    gap: 1em;
+    padding-right: 17%;
 }
