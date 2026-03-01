@@ -43,7 +43,7 @@
             <div>
                 <h1>Maestría en la Cocina</h1>
                 <p>Desde Araba para el mundo. Utensilios de cocina profesionales diseñados para chefs que exigen precisión, durabilidad y elegancia.</p>
-                <button>Ver Catálogo ↓</button>
+                <a href="#productos"><button>Catálogo ↓</button></a>
             </div>
         </section>
 
@@ -68,36 +68,76 @@
                 </article>
             </section>
 
-            <!--Sección que se completa con el codigo del script-->
+            <!--Formulario para ordenar los productos del catálogo completo-->
+            <div class="separador">
+                <h2>Catálogo Completo</h2>
+                <form action="#" id="ordenar-catalogo">
+                    <label for="ordenar">Ordenar por:</label>
+                    <select name="ordenar" id="ordenar">
+                        <option value="destacados">Destacados</option>
+                        <option value="precio-alto">Precio más alto</option>
+                        <option value="precio-bajo">Precio más bajo</option>
+                        <option value="categoria">Categoría</option>
+                        <option value="popularidad">Popularidad</option>
+                    </select>
+                    <!--<input type="submit" value="Enviar" />-->
+                </form>
+            </div>
+
+            <!--Sección con productos que se completa con el codigo del script-->
             <section class="catalogo-completo" id="productos"></section>
+
+            <!--Paginacion-->
+            <ul class ="paginacion">
+                <li><a href="#">&laquo;</a></li> <!--Anterior-->
+                <li><a class="active" href="#">1</a></li>
+                <li><a href="#">2</a></li>
+                <li><a href="#">3</a></li>
+                <li><a href="#">&raquo;</a></li> <!--Siguiente-->
+            </ul>
+        
         </main>
 
         <!--Footer con información de la empresa, enlaces a redes sociales, categorías y datos de contacto-->
         <footer>
-            <div class = "redes">
-                <h4>Escala PANS</h4>
-                <p>Tienda especializada en sartenes y menaje de cocina de alta gama. Pasión por la gastronomía desde el corazón de Araba.</p>
-                <div class = "iconos">
-                    <a href="#"><img src = "images/facebook.png" alt = "Facebook de Escala Pans"/></a>
-                    <a href="#"><img src = "images/instagram.png" alt = "Instagram de Escala Pans"/></a>
-                    <a href="#"><img src = "images/equis.png" alt = "Twitter de Escala Pans"/></a>
+            <section class = "informacion">
+                <div class = "redes">
+                    <h4>Escala PANS</h4>
+                    <p>Tienda especializada en sartenes y menaje de cocina de alta gama. Pasión por la gastronomía desde el corazón de Araba.</p>
+                    <div class = "iconos">
+                        <a href="#"><img src = "images/facebook.png" alt = "Facebook de Escala Pans"/></a>
+                        <a href="#"><img src = "images/instagram.png" alt = "Instagram de Escala Pans"/></a>
+                        <a href="#"><img src = "images/equis.png" alt = "Twitter de Escala Pans"/></a>
+                    </div>
                 </div>
-            </div>
-            <div class = "footer-categorias">      
-                <ul>
-                    <h4>Categorías</h4>
-                    <li><a href="#">Antiadherentes</a></li>
-                    <li><a href="#">Acero inoxidable</a></li>
-                    <li><a href="#">Hierro fundido</a></li>
-                    <li><a href="#">Wok</a></li>
-                </ul>
-            </div>
-            <div class="contacto">
-                <h4>Contacto</h4>
-                <p><span class="material-symbols-outlined">location_on</span>Plaza de la Virgen Blanca, 1 01001 Vitoria-Gasteiz</p>
-                <p><span class="material-symbols-outlined">call</span>+34 945 000 000</p>
-                <p><span class="material-symbols-outlined">mail</span>info@escala-pans.eus</p>
-            </div>
+                <div class = "footer-categorias">
+                    <h4>Categorías</h4>      
+                    <ul>
+                        <li><a href="#">Antiadherentes</a></li>
+                        <li><a href="#">Acero inoxidable</a></li>
+                        <li><a href="#">Hierro fundido</a></li>
+                        <li><a href="#">Blog & Recetas</a></li>
+                    </ul>
+                </div>
+                <div class="contacto">
+                    <h4>Contacto</h4>
+                    <ul>
+                        <li><span class="material-symbols-outlined">location_on</span>Plaza de la Virgen Blanca, 1 - 01001 Vitoria-Gasteiz</li>
+                        <li><span class="material-symbols-outlined">call</span>+34 945 000 000</li>
+                        <li><span class="material-symbols-outlined">mail</span>info@escala-pans.eus</li>
+                    </ul>
+                    <img src = "images/mapa.png" alt = "Mapa de la tienda física Escala, professional pans"/>
+                </img>
+            </section>
+            <!--Aviso legal y enlaces a políticas de privacidad y cookies-->
+            <section class = "aviso-legal">
+                <p id = "copyright">&copy; 2026 Escala PANS. Todos los derechos reservados.</p>
+                <div class = "avisos-derecha">
+                    <p><a href="#">Aviso Legal</a></p>
+                    <p><a href="#">Privacidad</a></p>
+                    <p><a href="#">Cookies</a></p>
+                </div>
+            </section>
         </footer>
     </body>
 
