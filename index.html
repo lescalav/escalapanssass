@@ -7,17 +7,17 @@
         <title>ESCALA Pans</title>
         <link rel = "stylesheet" href = "styles/styles.css"/>
         <link rel="icon" type="image/png" href="images/favicon.png">
+        <!--Fuentes de Google Fonts-->
         <style>
             @import url('https://fonts.googleapis.com/css2?family=Barlow:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=League+Spartan:wght@100..900&family=Montserrat:ital,wght@0,100..900;1,100..900&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap');
         </style>
-        <style>
-            @import url('https://fonts.googleapis.com/css2?family=Barlow:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=League+Spartan:wght@100..900&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap');
-        </style>
-        <!--Icono de busqueda y carrito de compra-->
+        <!--Íconos de Google-->
         <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
     </head>
 
     <body>
+        
+        <!--Header con el logo, el menú de navegación, los botones de idioma y los íconos de búsqueda y carrito-->
         <header>
             <a href="index.html"><img id = "logo" src = "images/logo.png" alt = "logotipo de Escala, professional pans"/></a>
             <nav>
@@ -29,13 +29,16 @@
                 </ul>
             </nav>
             <div class = "seleccionar-opciones">
-                <button id = "espaniol">ES</button>
-                <button id = "euskera">EU</button>
-                <span class="material-symbols-outlined">search</span>
-                <span class="material-symbols-outlined">shopping_cart</span>
+                <div class = "botones-idiomas">
+                    <button id = "espaniol">ES</button>
+                    <button id = "euskera">EU</button>
+                </div>
+                <span class="material-symbols-outlined"><a href="#">search</a></span>
+                <span class="material-symbols-outlined"><a href="#">shopping_cart</a></span>
             </div>
         </header>
 
+        <!--Sección central con un título, un párrafo descriptivo y un botón que invita a ver el catálogo-->
         <section class = "imagen-central">
             <div>
                 <h1>Maestría en la Cocina</h1>
@@ -44,6 +47,7 @@
             </div>
         </section>
 
+        <!--Sección de categorías y el catálogo completo-->
         <main>
             <section class="categorias">
                 <article id = "antihaderentes">
@@ -64,10 +68,11 @@
                 </article>
             </section>
 
+            <!--Sección que se completa con el codigo del script-->
             <section class="catalogo-completo" id="productos"></section>
-
         </main>
 
+        <!--Footer con información de la empresa, enlaces a redes sociales, categorías y datos de contacto-->
         <footer>
             <div class = "redes">
                 <h4>Escala PANS</h4>
@@ -96,25 +101,7 @@
         </footer>
     </body>
 
-    <script>
-        fetch("productos.xml")
-            .then(res => res.text())
-            .then(xmlText => {
-                fetch("productos.xsl")
-                .then(res => res.text())
-                .then(xslText => {
-                    const parser = new DOMParser();
-                    const xml = parser.parseFromString(xmlText, "text/xml");
-                    const xsl = parser.parseFromString(xslText, "text/xml");
-
-                    const xsltProcessor = new XSLTProcessor();
-                    xsltProcessor.importStylesheet(xsl);
-
-                    const result = xsltProcessor.transformToFragment(xml, document);
-
-                    document.getElementById("productos").appendChild(result);
-            });
-        });
-    </script>
+    <!--Script que carga los productos desde el archivo productos.js-->
+    <script src="scripts/productos.js"></script>
 
 </html>
