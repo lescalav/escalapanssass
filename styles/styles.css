@@ -5,8 +5,18 @@
     #078C5B (resaltado secundario), #4843D9 (resaltado terciario), #1C1917 (fondo de pie de página)
 */
 
+:root {
+    /*--color-principal: #3498db;
+    --espaciado-base: 16px;*/
+    --black: #000;
+    --white: #fff;
+    --gray: #ccc;
+    --smoke: #e2e2e2;
+    --disable: #f2f2f2;
+}
+
 body {
-    font-family: Barlow, Arial, sans-serif;
+    font-family: "Barlow", Arial, sans-serif;
     margin: 0;
     padding: 0;
     background-color: #F8F6F6;
@@ -492,7 +502,183 @@ footer .aviso-legal .avisos-derecha {
 
 .vista-producto {
     display: grid;
-    grid-template-columns: 1fr 1fr;
+    grid-template-columns: repeat(2, 1fr);
     gap: 2em;
     padding: 5% 17% 5% 17%;
+    align-items: center;
+    justify-content: center;
 }
+
+.imagenes {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.imagenes img {
+    width: 50%;
+}
+
+.miniaturas {
+    width: 70%;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 2%;
+    align-items: center;
+    margin-top: 2%;
+}
+
+.miniaturas img {
+    width: 100%;
+    border-radius: 8px;
+}
+
+.miniaturas img:hover {
+    border: 2px solid #E64C19;
+}
+
+.especificaciones-tecnicas {
+    background-color: #FFFFFF;
+    border: 1px solid #d9d7d7;
+    border-radius: 15px;
+    padding: 0.5em;
+}
+
+.especificaciones-tecnicas h4, .instrucciones-cuidado h4 {
+    font-family: "Arimo", Arial, Helvetica, sans-serif;
+    font-size: small;
+    font-weight: 800;
+    color: #1C1917;
+    margin: 0;
+    padding: 0.5em 0 0.5em 1em;
+}
+
+.especificaciones-tecnicas span, .instrucciones-cuidado span {
+    font-variation-settings: 
+        'FILL' 1;
+    color: #E64C19;
+    font-size: 1.5em;
+    vertical-align: middle;
+    margin-right: 0.5em;
+}
+
+.especificaciones-tecnicas ul {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+}
+
+
+.lista-caracteristicas li {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 1em;
+}
+
+.lista-caracteristicas .atributo {
+    font-size: 0.9em;
+    color: #727986;
+}
+
+.lista-caracteristicas .valor {
+    font-size: 0.9em;
+    color: #1C1917;
+}
+
+.instrucciones-cuidado {
+    margin-top: 5%;
+}
+
+.lista-cuidados {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 1em;
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.lista-cuidados li {
+    display: grid;
+    grid-template-rows: 1.5em auto;
+    align-items: center;
+    justify-items: center;
+    background-color: #e4ebf3;
+    padding: 1em;
+    border-radius: 8px;
+}
+
+span.texto {
+    font-size: 0.7em;
+    color: #1C1917;
+}
+
+/* Selector de cantidad y carrito */
+
+.selecciona-cantidad {
+    margin-top: 5%;
+    display: flex;
+}
+
+.cantidad-input {
+    width: 28%;
+    padding: 2%;
+    border: solid 1px #d9d7d7;
+    border-radius: 5px;
+    margin-right: 2%;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.cantidad-contador {
+    border: 0px;
+    font-size: 1.7em;
+    color: #727986;
+    background-color: transparent;
+}
+
+/* REVISAR ESTO */
+.cantidad-producto {
+    border: none;          /* quita el borde */
+    background: transparent; /* quita el fondo blanco */
+    outline: none;         /* quita el contorno al hacer clic */
+    font-size: 1rem;       /* opcional: ajusta el tamaño del texto */
+    width: 2.5rem;         /* opcional: tamaño del input */
+    text-align: center;    /* centra el número */
+}
+
+/* Quitar flechas en Chrome, Edge, Safari */
+.cantidad-producto::-webkit-inner-spin-button,
+.cantidad-producto::-webkit-outer-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+}
+
+/* Quitar flechas en Firefox */
+.cantidad-producto[type=number] {
+    -moz-appearance: textfield;
+}
+
+#aniadir-carrito {
+    width: 70%;
+    background-color: #E64C19;
+    box-shadow: 2px 2px 2px #bdb5b1;
+    border: 0px;
+    color: #FFFFFF;
+    font-family: "Arimo", Arial, Helvetica, sans-serif;
+    font-size: 0.8em;
+    font-weight: 600;
+    border-radius: 5px;
+    padding: 2%;
+}
+
+#aniadir-carrito span {
+    font-variation-settings: 
+        'FILL' 1;
+    color: #FFFFFF;
+    font-size: 1.8em;
+    vertical-align: middle;
+    margin-right: 0.5em;
+}
+

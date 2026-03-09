@@ -39,29 +39,59 @@
         <!--Zona principal que muestra el producto seleccionado-->
         <main class="vista-producto">
             <section class="imagenes">
-                <img src="images/producto.jpg" alt="Producto seleccionado">
+                <img src="images/antiadherente.png" alt="Sartén Antiadherente Pro de Escala PANS"/>
+                <div class="miniaturas">
+                    <img src="images/antiadherente.png" alt="Vista lateral de la Sartén Antiadherente Pro"/>
+                    <img src="images/crepera.png" alt="Detalle del recubrimiento de la Sartén Antiadherente Pro"/>
+                    <img src="images/inox.png" alt="Sartén Antiadherente Pro en uso"/>
+                    <img src="images/hierro.png" alt="Detalle del mango de la Sartén Antiadherente Pro"/>
+                </div>
             </section>
             <section class="texto-informacion-producto">
+                <!--Información principal del producto-->
                 <article class="informacion-principal">
                     <h1>Sartén Antiadherente Pro</h1>
                     <p>Diseñada para el chef exigente. Nuestra línea Pro combina la durabilidad del aluminio forjado con un recubrimiento de alto rendimiento que garantiza una cocina sin adherencias y una limpieza sin esfuerzo.</p>
+                    <p>(48 reseñas)</p>
+                    <p>78,00€</p>
                 </article>
+                <!--Recuadro sobre especificaciones técnicas-->
                 <article class="especificaciones-tecnicas">
+                    <h4><span class="material-symbols-outlined">settings</span>ESPECIFICACIONES TÉCNICAS</h4>
+                    <ul class="lista-caracteristicas">
+                        <li><span class="atributo">Diámetro</span><span class="valor">28 cm</span></li>
+                        <li><span class="atributo">Peso</span><span class="valor">1.2 kg</span></li>
+                        <li><span class="atributo">Material</span><span class="valor">Aluminio forjado</span></li>
+                        <li><span class="atributo">Recubrimiento</span><span class="valor">PTFE reforzado</span></li>
+                    </ul>
                 </article>
                 <article class="instrucciones-cuidado">
+                    <h4><span class="material-symbols-outlined">info</span>INSTRUCCIONES DE CUIDADO</h4>
+                    <ul class="lista-cuidados">
+                        <li>
+                            <span class="material-symbols-outlined">block</span>
+                            <span class="texto">Sin utensilios metálicos</span>
+                        </li>
+                        <li>
+                            <span class="material-symbols-outlined">wash</span>
+                            <span class="texto">Lavado a mano recomendado</span>
+                        </li>
+                        <li>
+                            <span class="material-symbols-outlined">thermostat</span>
+                            <span class="texto">Máx 220°C / 425°F</span>
+                        </li>
+                    </ul>
                 </article>
+                <!--Selección de cantidad y botón de compra-->
                 <article class="selecciona-cantidad">
-                    <form action="#" id="seleccion-cantidad-producto">
-                    <select name="seleccion-cantidad-producto" id="seleccion-cantidad-producto">
-                        <option value="destacados">Destacados</option>
-                        <option value="precio-alto">Precio más alto</option>
-                        <option value="precio-bajo">Precio más bajo</option>
-                        <option value="categoria">Categoría</option>
-                        <option value="popularidad">Popularidad</option>
-                    </select>
+                    <div class="cantidad-input">
+                        <button class="cantidad-contador cantidad-contador--menos" data-action="menos" type="button">-</button>
+                        <input class="cantidad-producto" type="number" name="cantidad-producto" min="0" max="10" value="1">
+                        <button class="cantidad-contador cantidad-contador--mas" data-action="mas" type="button">+</button>
+                    </div>
                     <!--<input type="submit" value="Enviar" />-->
                 </form>
-                    <button>Añadir al carrito</button>
+                    <button id="aniadir-carrito"><span class="material-symbols-outlined">shopping_cart</span>Añadir al carrito</button>
                 </article>
             </section>
         </main>
