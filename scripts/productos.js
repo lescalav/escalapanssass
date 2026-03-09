@@ -12,7 +12,7 @@ function plantillaProducto(producto) {
   if (producto.categoria === "Wok") claseCategoria = "etiqueta-morada";
 
   return `
-    <article>
+    <article><a href="producto.html">
 
       <div class="producto-imagen">
 
@@ -51,7 +51,7 @@ function plantillaProducto(producto) {
         </button>
       </div>
 
-    </article>
+    </a></article>
   `;
 }
 
