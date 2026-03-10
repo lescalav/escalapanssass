@@ -16,10 +16,11 @@
 }
 
 body {
-    font-family: "Barlow", Arial, sans-serif;
+    font-family: 'Montserrat', Arial, sans-serif;
     margin: 0;
     padding: 0;
     background-color: #F8F6F6;
+    color: #1a1b1e;
 }
 
 * {
@@ -33,6 +34,16 @@ a {
 
 ul {
     list-style: none;
+}
+
+.titulo {
+    margin-bottom: 3%;
+    border-bottom: 1px solid #d9d7d7;
+    padding: 2% 0 2% 0;
+}
+
+.titulo p {
+    color: #727986;
 }
 
 /* Estilos para el header */
@@ -721,4 +732,105 @@ span.texto {
     font-size: 1.5em;
     vertical-align: middle;
     margin-right: 0.5em;
+}
+
+/* TIENDA.HTML */
+
+.filtros-seleccion {
+    color: #727986;
+}
+
+.opcion {
+    display: flex;
+    gap: 0.5em;
+    margin-bottom: 0.5em;
+}
+
+.opcion label {
+    font-size: 0.8em;
+}
+
+.filtrar-categorias label {
+    display: block;
+}
+
+/* Selector de diametro */
+
+.filtro-diametro {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 2%;
+}
+
+.filtro-diametro input[type="radio"] {
+    display: none;
+}
+
+.filtro-diametro label {
+    padding: 0.3em 0.7em;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    cursor: pointer;
+    background: #f7f7f7;
+    transition: all 0.2s ease;
+    font-size: 0.8em;
+    margin-bottom: 2%;
+}
+
+/* Hover */
+.filtro-diametro label:hover {
+    background: #eaeaea;
+}
+
+/* Cuando está seleccionado */
+.filtro-diametro input[type="radio"]:checked + label {
+    border-color: #E64C19;
+    background: #f9e7e2;
+    color: #E64C19;
+}
+
+/* Recuadro de filtros */
+.filtros-seleccion {
+    background-color: #FFFFFF;
+    padding: 5%;
+    border-radius: 15px;
+    border: 1px solid #d9d7d7;
+    height: fit-content;
+}
+
+/* Display de la parte principal */
+.grid-tienda {
+    display: grid;
+    grid-template-columns: 1fr 4fr;
+    gap: 2%;
+}
+
+/* SLIDER */
+
+#slider {
+    width: 100%;
+}
+
+.rango {
+    display: flex;
+    justify-content: space-between;
+}
+
+.number {
+    font-size: small;
+}
+
+.cabecero-filtros {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.cabecero-filtros h3 {
+    color: #1a1b1e;
+}
+
+.cabecero-filtros p {
+    font-size: 0.8em;
+    color: #E64C19;
+    font-weight: 600;
 }

@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+
+<html lang ="es">
+    <head>
+        <meta charset = "UTF-8"/>
+        <meta name = "viewport" content = "width=device-width, initial-scale=1.0"/>
+        <title>ESCALA Pans</title>
+        <link rel = "stylesheet" href = "styles/styles.css"/>
+        <link rel="icon" type="image/png" href="images/favicon.png">
+        <!-- Google Fonts -->
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Barlow:wght@100..900&family=Arimo:wght@400..700&family=League+Spartan:wght@100..900&family=Montserrat:ital,wght@0,100..900;1,100..900&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+        <!--Íconos de Google-->
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
+    </head>
+
+    <body>
+        
+        <!--Header con el logo, el menú de navegación, los botones de idioma y los íconos de búsqueda y carrito-->
+        <header>
+            <a href="index.html"><img id = "logo" src = "images/logo.png" alt = "logotipo de Escala, professional pans"/></a>
+            <nav>
+                <ul>
+                    <li><a href = "index.html">Inicio</a></li>
+                    <li><a href = "tienda.html">Tienda</a></li>
+                    <li><a href = "comparar.html">Comparar</a></li>
+                    <li><a href = "carrito.html">Carrito</a></li>
+                </ul>
+            </nav>
+            <div class = "seleccionar-opciones">
+                <div class = "botones-idiomas">
+                    <button id = "espaniol">ES</button>
+                    <button id = "euskera">EU</button>
+                </div>
+                <span class="material-symbols-outlined"><a href="#">search</a></span>
+                <span class="material-symbols-outlined"><a href="#">shopping_cart</a></span>
+            </div>
+        </header>
+
+        <!--Sección de categorías y el catálogo completo-->
+        <main class="tienda-main">
+            <div class="titulo">
+                <h1>Nuestra tienda</h1>
+                <p>Explora nuestra colección completa de sartenes profesionales</p>
+            </div>
+            <!--Formulario para ordenar los productos del catálogo completo-->
+            <div class="grid-tienda">
+            <aside class="filtros-seleccion">
+                <div class="cabecero-filtros">
+                    <h3>Filtrar</h3>
+                    <p class="limpiar">Limpiar todo</p>
+                </div>
+                <!--CATEGORIAS-->
+                <h5>CATEGORíAS</h5>
+                <form class="filtrar-categorias" action="#">
+                    <div class="opcion">
+                        <input type="checkbox" id="categoria1" name="categoria1" value="todos">
+                        <label for="categoria1">Todas</label>
+                    </div>
+                    <div class="opcion">
+                        <input type="checkbox" id="categoria2" name="categoria2" value="antiadherentes">
+                        <label for="categoria2">Antiadherentes</label>
+                    </div>
+                    <div class="opcion">
+                        <input type="checkbox" id="categoria3" name="categoria3" value="hierro-fundido">
+                        <label for="categoria3">Hierro Fundido</label>
+                    </div>
+                    <div class="opcion">
+                        <input type="checkbox" id="categoria4" name="categoria4" value="acero-inoxidable">
+                        <label for="categoria4">Hierro Fundido</label>
+                    </div>
+                    <div class="opcion">
+                        <input type="checkbox" id="categoria5" name="categoria5" value="wok">
+                        <label for="categoria5">Wok</label>
+                    </div>
+                    <!--<input type="submit" value="Submit">-->
+                </form>
+                <!--PRECIO-->
+                <h5>PRECIO</h5>
+                <div class="filtrar-precio">
+                    <div class="slider-container">
+                        <span class="bar"><span class="fill"></span></span>
+                        <input type="range" id="slider" class="slider" min="20" max="300" value="100">
+                        <div class="rango">
+                            <span class="number">€20</span>
+                            <span class="number">€300+</span>
+                        </div>
+                    </div>
+                </div>
+                <!--DIAMETRO-->
+                <h5>DIÁMETRO</h5>
+                <div class="filtro-diametro">
+                    <input type="radio" id="d20" name="diametro" value="20">
+                    <label for="d20">20 cm</label>
+
+                    <input type="radio" id="d24" name="diametro" value="24">
+                    <label for="d24">24 cm</label>
+
+                    <input type="radio" id="d28" name="diametro" value="28">
+                    <label for="d28">28 cm</label>
+
+                    <input type="radio" id="d32" name="diametro" value="32">
+                    <label for="d32">32 cm</label>
+                </div>
+
+            </aside>
+            <div class="seccion-resultados">
+                <div class="separador">
+                    <h2>Todos los productos</h2>
+                    <form action="#" id="ordenar-catalogo">
+                        <label for="ordenar">Ordenar por:</label>
+                        <select name="ordenar" id="ordenar">
+                            <option value="destacados">Destacados</option>
+                            <option value="precio-alto">Precio más alto</option>
+                            <option value="precio-bajo">Precio más bajo</option>
+                            <option value="categoria">Categoría</option>
+                            <option value="popularidad">Popularidad</option>
+                        </select>
+                        <!--<input type="submit" value="Enviar" />-->
+                    </form>
+                </div>
+
+                <!--Sección con productos que se completa con el codigo del script-->
+                <section class="catalogo-completo" id="productos"></section>
+
+                <!--Paginacion-->
+                <ul class ="paginacion">
+                    <li><a href="#">&laquo;</a></li> <!--Anterior-->
+                    <li><a class="active" href="#">1</a></li>
+                    <li><a href="#">2</a></li>
+                    <li><a href="#">3</a></li>
+                    <li><a href="#">&raquo;</a></li> <!--Siguiente-->
+                </ul>
+            </div>
+        </div>
+        </main>
+
+        <!--Footer con información de la empresa, enlaces a redes sociales, categorías y datos de contacto-->
+        <footer>
+            <section class = "informacion">
+                <div class = "redes">
+                    <h4>Escala PANS</h4>
+                    <p>Tienda especializada en sartenes y menaje de cocina de alta gama. Pasión por la gastronomía desde el corazón de Araba.</p>
+                    <div class = "iconos">
+                        <a href="#"><img src = "images/facebook.png" alt = "Facebook de Escala Pans"/></a>
+                        <a href="#"><img src = "images/instagram.png" alt = "Instagram de Escala Pans"/></a>
+                        <a href="#"><img src = "images/equis.png" alt = "Twitter de Escala Pans"/></a>
+                    </div>
+                </div>
+                <div class = "footer-categorias">
+                    <h4>Categorías</h4>      
+                    <ul>
+                        <li><a href="#">Antiadherentes</a></li>
+                        <li><a href="#">Acero inoxidable</a></li>
+                        <li><a href="#">Hierro fundido</a></li>
+                        <li><a href="#">Blog & Recetas</a></li>
+                    </ul>
+                </div>
+                <div class="contacto">
+                    <h4>Contacto</h4>
+                    <ul>
+                        <li><span class="material-symbols-outlined">location_on</span>Plaza de la Virgen Blanca, 1 - 01001 Vitoria-Gasteiz</li>
+                        <li><span class="material-symbols-outlined">call</span>+34 945 000 000</li>
+                        <li><span class="material-symbols-outlined">mail</span>info@escala-pans.eus</li>
+                    </ul>
+                    <img src = "images/mapa.png" alt = "Mapa de la tienda física Escala, professional pans"/>
+                </img>
+            </section>
+            <!--Aviso legal y enlaces a políticas de privacidad y cookies-->
+            <section class = "aviso-legal">
+                <p id = "copyright">&copy; 2026 Escala PANS. Todos los derechos reservados.</p>
+                <div class = "avisos-derecha">
+                    <p><a href="#">Aviso Legal</a></p>
+                    <p><a href="#">Privacidad</a></p>
+                    <p><a href="#">Cookies</a></p>
+                </div>
+            </section>
+        </footer>
+    </body>
+
+    <!--Script que carga los productos desde el archivo productos.js-->
+    <script src="scripts/productos.js"></script>
+
+</html>
