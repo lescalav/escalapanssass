@@ -1,6 +1,6 @@
 /*
     Estilos ESCALA Pans
-    - Fuente principal: Barlow
+    - Fuente principal: Montserrat
     - Colores: #F8F6F6 (fondo), #FFFFFF (header), #727986 (texto), #E64C19 (resaltado),
     #078C5B (resaltado secundario), #4843D9 (resaltado terciario), #1C1917 (fondo de pie de página)
 */
@@ -8,19 +8,23 @@
 :root {
     /*--color-principal: #3498db;
     --espaciado-base: 16px;*/
-    --black: #000;
-    --white: #fff;
-    --gray: #ccc;
-    --smoke: #e2e2e2;
-    --disable: #f2f2f2;
+    --texto: #1a1b1e;
+    --textosecundario: #727986;
+    --fondo: #F8F6F6;
+    --blanco: #fcf0f0;
+    --resaltado: #E64C19;
+    --verde: #078C5B;
+    --morado: #4843D9;
+    --fondooscuro: #1C1917;
+    --bordeclaro: #d9d7d7;
 }
 
 body {
     font-family: 'Montserrat', Arial, sans-serif;
     margin: 0;
     padding: 0;
-    background-color: #F8F6F6;
-    color: #1a1b1e;
+    background-color: var(--fondo);
+    color: var(--texto);
 }
 
 * {
@@ -38,18 +42,18 @@ ul {
 
 .titulo {
     margin-bottom: 3%;
-    border-bottom: 1px solid #d9d7d7;
+    border-bottom: 1px solid var(--bordeclaro);
     padding: 2% 0 2% 0;
 }
 
 .titulo p {
-    color: #727986;
+    color: var(--textosecundario);
 }
 
 /* Estilos para el header */
 
 header {
-    background-color: #FFFFFF;
+    background-color: var(--blanco);
     display: flex;
     align-items: center;
     justify-content: space-between;
@@ -74,13 +78,13 @@ nav ul li {
 }
 
 nav ul li a:hover {
-    color: #E64C19;
+    color: var(--resaltado);
     transition: 500ms;
 }
 
 nav ul li a {
     font-weight: 500;
-    color: #727986;
+    color: var(--textosecundario);
 }
 
 .seleccionar-opciones {
@@ -95,7 +99,7 @@ nav ul li a {
 
 .seleccionar-opciones button {
     background-color: transparent;
-    border: 1px solid #d9d7d7;
+    border: 1px solid var(--bordeclaro);
     color: #1a1b1e;
     padding: 5px 12px;
     cursor: pointer;
@@ -106,17 +110,17 @@ nav ul li a {
 }
 
 .seleccionar-opciones button:hover {
-    background-color: #E64C19;
-    color: #FFFFFF;
-    border-color: #E64C19;
+    background-color: var(--resaltado);
+    color: var(--blanco);
+    border-color: var(--resaltado);
     transition: 500ms;
 }
 
 #espaniol {
     border-right: 0px;
     border-radius: 7px 0 0 7px;
-    background-color: #F8F6F6;
-    color: #E64C19;
+    background-color: var(--fondo);
+    color: var(--resaltado);
 }
 
 #euskera {
@@ -125,7 +129,7 @@ nav ul li a {
 }
 
 .seleccionar-opciones span:hover {
-    color: #E64C19;
+    color: var(--resaltado);
     transition: 500ms;
 }
 
@@ -147,7 +151,7 @@ nav ul li a {
 
 .imagen-central div {
     width: 30%;
-    color: #FFFFFF;
+    color: var(--blanco);
 }
 
 .imagen-central p {
@@ -156,8 +160,8 @@ nav ul li a {
 }
 
 .imagen-central button {
-    background-color: #E64C19;
-    color: #FFFFFF;
+    background-color: var(--resaltado);
+    color: var(--blanco);
     border: none;
     border-radius: 5px;
     padding: 10px 20px;
@@ -192,7 +196,7 @@ main {
 .categorias article {
     border-radius: 15px;
     height: 200px;
-    color: #FFFFFF;
+    color: var(--blanco);
     display: flex;
     flex-direction: column;       
     justify-content: flex-end;    

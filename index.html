@@ -17,10 +17,12 @@
 
     <body>
         
-        <!--Header con el logo, el menú de navegación, los botones de idioma y los íconos de búsqueda y carrito-->
+        <!--HEADER-->
         <header>
+            <!--Logotipo-->
             <a href="index.html"><img id = "logo" src = "images/logo.png" alt = "logotipo de Escala, professional pans"/></a>
             <nav>
+                <!--Menú de navegación-->
                 <ul>
                     <li><a href = "index.html">Inicio</a></li>
                     <li><a href = "tienda.html">Tienda</a></li>
@@ -28,13 +30,16 @@
                     <li><a href = "carrito.html">Carrito</a></li>
                 </ul>
             </nav>
+            <!--Selección de otras opciones-->
             <div class = "seleccionar-opciones">
+                <!--Idiomas-->
                 <div class = "botones-idiomas">
                     <button id = "espaniol">ES</button>
                     <button id = "euskera">EU</button>
                 </div>
-                <span class="material-symbols-outlined"><a href="#">search</a></span>
-                <span class="material-symbols-outlined"><a href="#">shopping_cart</a></span>
+                <!--Búsqueda y carrito-->
+                <a href="#" class="material-symbols-outlined">search</a>
+                <a href="#" class="material-symbols-outlined">shopping_cart</a>
             </div>
         </header>
 
@@ -43,12 +48,13 @@
             <div>
                 <h1>Maestría en la Cocina</h1>
                 <p>Desde Araba para el mundo. Utensilios de cocina profesionales diseñados para chefs que exigen precisión, durabilidad y elegancia.</p>
-                <a href="#productos"><button>Catálogo ↓</button></a>
+                <button onclick="location.href='#productos'">Catálogo ↓</button>
             </div>
         </section>
 
-        <!--Sección de categorías y el catálogo completo-->
+        <!--CONTENIDO PRINCIPAL-->
         <main class="index-main">
+            <!--Categorías-->
             <section class="categorias">
                 <article id = "antihaderentes">
                     <h2>Antihaderentes</h2>
@@ -88,13 +94,15 @@
             <section class="catalogo-completo" id="productos"></section>
 
             <!--Paginacion-->
-            <ul class ="paginacion">
-                <li><a href="#">&laquo;</a></li> <!--Anterior-->
-                <li><a class="active" href="#">1</a></li>
-                <li><a href="#">2</a></li>
-                <li><a href="#">3</a></li>
-                <li><a href="#">&raquo;</a></li> <!--Siguiente-->
-            </ul>
+            <nav class ="paginacion">
+                <ul>
+                    <li><a href="#">&laquo;</a></li> <!--Anterior-->
+                    <li><a class="active" href="#">1</a></li>
+                    <li><a href="#">2</a></li>
+                    <li><a href="#">3</a></li>
+                    <li><a href="#">&raquo;</a></li> <!--Siguiente-->
+                </ul>
+            </nav>
         
         </main>
 
@@ -121,13 +129,12 @@
                 </div>
                 <div class="contacto">
                     <h4>Contacto</h4>
-                    <ul>
-                        <li><span class="material-symbols-outlined">location_on</span>Plaza de la Virgen Blanca, 1 - 01001 Vitoria-Gasteiz</li>
-                        <li><span class="material-symbols-outlined">call</span>+34 945 000 000</li>
-                        <li><span class="material-symbols-outlined">mail</span>info@escala-pans.eus</li>
-                    </ul>
-                    <img src = "images/mapa.png" alt = "Mapa de la tienda física Escala, professional pans"/>
-                </img>
+                    <address>
+                        <p><span class="material-symbols-outlined" aria-label="Dirección">location_on</span>Plaza de la Virgen Blanca, 1 - 01001 Vitoria-Gasteiz</p>
+                        <p><span class="material-symbols-outlined" aria-label="Teléfono">call</span>+34 945 000 000</p>
+                        <p><span class="material-symbols-outlined" aria-label="Correo electrónico">mail</span>info@escala-pans.eus</p>
+                    </address>
+                    <img src = "images/mapa.png" alt = "Mapa de la tienda física Escala, professional pans">
             </section>
             <!--Aviso legal y enlaces a políticas de privacidad y cookies-->
             <section class = "aviso-legal">
