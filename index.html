@@ -6,6 +6,7 @@
         <meta name = "viewport" content = "width=device-width, initial-scale=1.0"/>
         <title>ESCALA Pans</title>
         <link rel = "stylesheet" href = "styles/styles.css"/>
+        <link rel = "stylesheet" href = "styles/catalogo.css"/>
         <link rel="icon" type="image/png" href="images/favicon.png">
         <!-- Google Fonts -->
         <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -21,10 +22,10 @@
         <header>
             <!--Logotipo-->
             <a href="index.html"><img id = "logo" src = "images/logo.png" alt = "logotipo de Escala, professional pans"/></a>
-            <nav>
-                <!--Menú de navegación-->
+            <!--Menú de navegación-->
+            <nav id="menu-principal">
                 <ul>
-                    <li><a href = "index.html">Inicio</a></li>
+                    <li><a href = "index.html" class="activo">Inicio</a></li>
                     <li><a href = "tienda.html">Tienda</a></li>
                     <li><a href = "comparar.html">Comparar</a></li>
                     <li><a href = "carrito.html">Carrito</a></li>
@@ -106,9 +107,10 @@
         
         </main>
 
-        <!--Footer con información de la empresa, enlaces a redes sociales, categorías y datos de contacto-->
+        <!--FOOTER-->
         <footer>
             <section class = "informacion">
+                <!--Redes-->
                 <div class = "redes">
                     <h4>Escala PANS</h4>
                     <p>Tienda especializada en sartenes y menaje de cocina de alta gama. Pasión por la gastronomía desde el corazón de Araba.</p>
@@ -118,6 +120,7 @@
                         <a href="#"><img src = "images/equis.png" alt = "Twitter de Escala Pans"/></a>
                     </div>
                 </div>
+                <!--Categorías-->
                 <div class = "footer-categorias">
                     <h4>Categorías</h4>      
                     <ul>
@@ -127,6 +130,7 @@
                         <li><a href="#">Blog & Recetas</a></li>
                     </ul>
                 </div>
+                <!--Datos de contacto-->
                 <div class="contacto">
                     <h4>Contacto</h4>
                     <address>
@@ -135,6 +139,7 @@
                         <p><span class="material-symbols-outlined" aria-label="Correo electrónico">mail</span>info@escala-pans.eus</p>
                     </address>
                     <img src = "images/mapa.png" alt = "Mapa de la tienda física Escala, professional pans">
+                </div>
             </section>
             <!--Aviso legal y enlaces a políticas de privacidad y cookies-->
             <section class = "aviso-legal">

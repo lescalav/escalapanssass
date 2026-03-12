@@ -1,24 +1,29 @@
+<!DOCTYPE html>
+
 <html lang ="es">
     <head>
         <meta charset = "UTF-8"/>
         <meta name = "viewport" content = "width=device-width, initial-scale=1.0"/>
         <title>ESCALA Pans</title>
         <link rel = "stylesheet" href = "styles/styles.css"/>
+        <link rel = "stylesheet" href = "styles/producto.css"/>
         <link rel="icon" type="image/png" href="images/favicon.png">
-        <!--Fuentes de Google Fonts-->
+        <!-- Google Fonts -->
         <link rel="preconnect" href="https://fonts.googleapis.com">
         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-        <link href="https://fonts.googleapis.com/css2?family=Barlow:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=League+Spartan:wght@100..900&family=Montserrat:ital,wght@0,100..900;1,100..900&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css2?family=Barlow:wght@100..900&family=Arimo:wght@400..700&family=League+Spartan:wght@100..900&family=Montserrat:ital,wght@0,100..900;1,100..900&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
         <!--Íconos de Google-->
         <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
     </head>
 
     <body>
         
-        <!--Header con el logo, el menú de navegación, los botones de idioma y los íconos de búsqueda y carrito-->
+        <!--HEADER-->
         <header>
+            <!--Logotipo-->
             <a href="index.html"><img id = "logo" src = "images/logo.png" alt = "logotipo de Escala, professional pans"/></a>
-            <nav>
+            <!--Menú de navegación-->
+            <nav id="menu-principal">
                 <ul>
                     <li><a href = "index.html">Inicio</a></li>
                     <li><a href = "tienda.html">Tienda</a></li>
@@ -26,17 +31,20 @@
                     <li><a href = "carrito.html">Carrito</a></li>
                 </ul>
             </nav>
+            <!--Selección de otras opciones-->
             <div class = "seleccionar-opciones">
+                <!--Idiomas-->
                 <div class = "botones-idiomas">
                     <button id = "espaniol">ES</button>
                     <button id = "euskera">EU</button>
                 </div>
-                <span class="material-symbols-outlined"><a href="#">search</a></span>
-                <span class="material-symbols-outlined"><a href="#">shopping_cart</a></span>
+                <!--Búsqueda y carrito-->
+                <a href="#" class="material-symbols-outlined">search</a>
+                <a href="#" class="material-symbols-outlined">shopping_cart</a>
             </div>
         </header>
 
-        <!--Zona principal que muestra el producto seleccionado-->
+        <!--CONTENIDO PRINCIPAL: muestra el producto seleccionado-->
         <main class="vista-producto">
             <section class="imagenes">
                 <img src="images/antiadherente.png" alt="Sartén Antiadherente Pro de Escala PANS"/>
@@ -72,19 +80,20 @@
                         <li><span class="atributo">Recubrimiento</span><span class="valor">PTFE reforzado</span></li>
                     </ul>
                 </article>
+                <!--Recuadro sobre instrucciones de cuidado-->
                 <article class="instrucciones-cuidado">
                     <h4><span class="material-symbols-outlined">info</span>INSTRUCCIONES DE CUIDADO</h4>
                     <ul class="lista-cuidados">
                         <li>
-                            <span class="material-symbols-outlined">block</span>
+                            <span class="material-symbols-outlined" aria-hidden="true">block</span>
                             <span class="texto">Sin utensilios metálicos</span>
                         </li>
                         <li>
-                            <span class="material-symbols-outlined">wash</span>
+                            <span class="material-symbols-outlined" aria-hidden="true">wash</span>
                             <span class="texto">Lavado a mano recomendado</span>
                         </li>
                         <li>
-                            <span class="material-symbols-outlined">thermostat</span>
+                            <span class="material-symbols-outlined" aria-hidden="true">thermostat</span>
                             <span class="texto">Máx 220°C / 425°F</span>
                         </li>
                     </ul>
@@ -93,23 +102,23 @@
                 <article class="selecciona-cantidad">
                     <div class="cantidad-input">
                         <button class="cantidad-contador cantidad-contador--menos" data-action="menos" type="button">-</button>
-                        <input class="cantidad-producto" type="number" name="cantidad-producto" min="0" max="10" value="1">
+                        <input class="cantidad-producto" type="number" name="cantidad-producto" min="1" max="10" value="1">
                         <button class="cantidad-contador cantidad-contador--mas" data-action="mas" type="button">+</button>
                     </div>
                     <!--<input type="submit" value="Enviar" />-->
-                </form>
                     <button id="aniadir-carrito"><span class="material-symbols-outlined">shopping_cart</span>Añadir al carrito</button>
                 </article>
                 <article class="informacion-envio">
-                    <p><span class="material-symbols-outlined">check_circle</span>En stock</p>
-                    <p><span class="material-symbols-outlined">local_shipping</span>Envío gratis 24/48 h</p>
+                    <p><span class="material-symbols-outlined" aria-hidden="true">check_circle</span>En stock</p>
+                    <p><span class="material-symbols-outlined" aria-hidden="true">local_shipping</span>Envío gratis 24/48 h</p>
                 </article>
             </section>
         </main>
 
-        <!--Footer con información de la empresa, enlaces a redes sociales, categorías y datos de contacto-->
+        <!--FOOTER-->
         <footer>
             <section class = "informacion">
+                <!--Redes-->
                 <div class = "redes">
                     <h4>Escala PANS</h4>
                     <p>Tienda especializada en sartenes y menaje de cocina de alta gama. Pasión por la gastronomía desde el corazón de Araba.</p>
@@ -119,6 +128,7 @@
                         <a href="#"><img src = "images/equis.png" alt = "Twitter de Escala Pans"/></a>
                     </div>
                 </div>
+                <!--Categorías-->
                 <div class = "footer-categorias">
                     <h4>Categorías</h4>      
                     <ul>
@@ -128,15 +138,16 @@
                         <li><a href="#">Blog & Recetas</a></li>
                     </ul>
                 </div>
+                <!--Datos de contacto-->
                 <div class="contacto">
                     <h4>Contacto</h4>
-                    <ul>
-                        <li><span class="material-symbols-outlined">location_on</span>Plaza de la Virgen Blanca, 1 - 01001 Vitoria-Gasteiz</li>
-                        <li><span class="material-symbols-outlined">call</span>+34 945 000 000</li>
-                        <li><span class="material-symbols-outlined">mail</span>info@escala-pans.eus</li>
-                    </ul>
-                    <img src = "images/mapa.png" alt = "Mapa de la tienda física Escala, professional pans"/>
-                </img>
+                    <address>
+                        <p><span class="material-symbols-outlined" aria-label="Dirección">location_on</span>Plaza de la Virgen Blanca, 1 - 01001 Vitoria-Gasteiz</p>
+                        <p><span class="material-symbols-outlined" aria-label="Teléfono">call</span>+34 945 000 000</p>
+                        <p><span class="material-symbols-outlined" aria-label="Correo electrónico">mail</span>info@escala-pans.eus</p>
+                    </address>
+                    <img src = "images/mapa.png" alt = "Mapa de la tienda física Escala, professional pans">
+                </div>
             </section>
             <!--Aviso legal y enlaces a políticas de privacidad y cookies-->
             <section class = "aviso-legal">
