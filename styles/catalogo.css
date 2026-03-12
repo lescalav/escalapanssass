@@ -1,0 +1,195 @@
+/* 
+    ESTILOS PARA EL
+    CATÁLOGO COMPLETO
+*/
+
+/* Estructura */
+
+.catalogo-completo {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 2em;
+    margin-bottom: 40px;
+}
+
+.separador {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 1em;
+}
+
+/* Estilos para cada producto */
+
+.catalogo-completo article {
+    background-color: #FFFFFF;
+    border: 1px solid var(--bordeclaro);
+    border-radius: 15px;
+}
+
+.producto-imagen {
+    display: flex;
+    align-content: center;
+    justify-content: center;
+    overflow: hidden;
+    border-radius: 15px 15px 0 0;
+    margin: 0;
+    background-color: #F5F5F4;
+    position: relative;
+}
+
+.producto-imagen img {
+    width: 40%;
+    padding: 2em 0 2em 0;
+}
+
+.producto-info {
+    padding-left: 1em;
+}
+
+/* Estilos de etiquetas de productos */
+
+.producto-imagen .etiqueta {
+    font-family: 'League Spartan', sans-serif;
+    font-weight: 600;
+    letter-spacing: 0.1dvh;
+    position:absolute;
+    top: 10%;
+    color: white;
+    font-size: 0.7em;
+    padding: 0.5em 1em;
+    border-radius: 12px;
+    text-transform: uppercase;
+}
+
+.producto-imagen .izquierda {
+    left: 5%;
+}
+
+.producto-imagen .derecha {
+    right: 5%;
+}
+
+/* Colores de etiquetas */
+
+.producto-imagen .etiqueta-azul {
+    background-color: #635bff;
+}
+
+.producto-imagen .etiqueta-amarilla {
+    background-color: #F9A825;
+}
+
+.producto-imagen .etiqueta-verde {
+    background-color: #078C5B;
+}
+
+.producto-imagen .etiqueta-morada {
+    background-color: #8E24AA;
+}
+
+.producto-imagen .etiqueta-naranja {
+    background-color: #E64C19;
+}
+
+.producto-imagen .etiqueta-gris {
+    background-color: #8E939E;
+}
+
+.producto-imagen .etiqueta-roja {
+    background-color: #DC2626;
+}
+
+/* Fin colores de etiquetas */
+
+.producto-info p {
+    color:#727986;
+    padding-top: 0.5em;
+    margin: 0;
+}
+
+.producto-info h3 {
+    color: #1C1917;
+    margin: 0;
+    padding-top: 1em;
+}
+
+.caracteristicas {
+    list-style: none;
+    padding: 0;
+}
+
+.caracteristicas span {
+    fill:#727986;
+    font-size: 1.2em;
+    vertical-align: middle;
+    margin-right: 1em;
+}
+
+.caracteristicas li {
+    color: #727986;
+    line-height: 1.5em;
+    font-size: 0.9em;
+}
+
+.producto-acciones {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 15px;
+    padding:15px;
+}
+
+.producto-acciones .precio {
+    font-weight: 600;
+    color: var(--resaltado);
+    font-size: 1.3em;
+}
+
+.producto-acciones button {
+    background-color: #FCEDE8;
+    border: none;
+    border-radius: 10px;
+    padding: 10px;
+    cursor: pointer;
+    display: flex;
+    justify-content: center;
+}
+
+.producto-acciones button span {
+    color: var(--resaltado);
+    font-size: 2em;
+}
+
+/* Estilos de paginación */
+
+.paginacion {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 5%;
+}
+
+.paginacion ul {
+    display: flex;
+    gap: 0.5em;
+    padding: 0;
+    margin: 0;
+    list-style: none;
+}
+
+.paginacion li a {
+    display: block;
+    padding: 7px 12px;
+    text-decoration: none;
+    border: 1px solid var(--bordeclaro);
+    color: #727986;
+    font-size: 0.9em;
+    font-weight: 600;
+    background-color: #FFFFFF;
+    border-radius: 5px;
+}
+
+.paginacion li a.active {
+    background-color: var(--resaltado);
+    color: white;
+}
