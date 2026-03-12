@@ -1,0 +1,204 @@
+<!DOCTYPE html>
+
+<html lang ="es">
+    <head>
+        <meta charset = "UTF-8"/>
+        <meta name = "viewport" content = "width=device-width, initial-scale=1.0"/>
+        <title>ESCALA Pans</title>
+        <link rel = "stylesheet" href = "styles/styles.css"/>
+        <link rel = "stylesheet" href = "styles/comparar.css"/>
+        <link rel="icon" type="image/png" href="images/favicon.png">
+        <!-- Google Fonts -->
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Barlow:wght@100..900&family=Arimo:wght@400..700&family=League+Spartan:wght@100..900&family=Montserrat:ital,wght@0,100..900;1,100..900&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+        <!--Íconos de Google-->
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
+    </head>
+
+    <body>
+        
+        <!--HEADER-->
+        <header>
+            <!--Logotipo-->
+            <a href="index.html"><img id = "logo" src = "images/logo.png" alt = "logotipo de Escala, professional pans"/></a>
+            <!--Menú de navegación-->
+            <nav id="menu-principal">
+                <ul>
+                    <li><a href = "index.html">Inicio</a></li>
+                    <li><a href = "tienda.html">Tienda</a></li>
+                    <li><a href = "comparar.html" class="activo">Comparar</a></li>
+                    <li><a href = "carrito.html">Carrito</a></li>
+                </ul>
+            </nav>
+            <!--Selección de otras opciones-->
+            <div class = "seleccionar-opciones">
+                <!--Idiomas-->
+                <div class = "botones-idiomas">
+                    <button id = "espaniol">ES</button>
+                    <button id = "euskera">EU</button>
+                </div>
+                <!--Búsqueda y carrito-->
+                <a href="#" class="material-symbols-outlined">search</a>
+                <a href="#" class="material-symbols-outlined">shopping_cart</a>
+            </div>
+        </header>
+
+        <!--CONTENIDO PRINCIPAL-->
+        <main>
+            <div class="titulo">
+                <h1>Comparar Productos</h1>
+                <p>Encuentra la sartén perfecta comparando características</p>
+            </div>
+            <!--Tabla comparativa-->
+            <table>
+                <tr>
+                    <th>Producto</th>
+                    <td><img src="images/antiadherente.png" alt="Imagen de la Sartén Antiadherente Pro">Sartén Antiadherente Pro</td>
+                    <td><img src="images/hierro.png" alt="Imagen de la Sartén Hierro Fundido">Sartén Hierro Fundido</td>
+                    <td><img src="images/inox2.png" alt="Imagen de la Sartén Acero Inoxidable">Sartén Acero Inoxidable</td>
+                </tr>
+                <tr>
+                    <th>Precio</th>
+                    <td class="precio">79,00 €</td>
+                    <td class="precio">89,00 €</td>
+                    <td class="precio">69,00 €</td>
+                </tr>
+                <tr>
+                    <th>Material</th>
+                    <td>Aluminio forjado</td>
+                    <td>Hierro fundido</td>
+                    <td>Acero inoxidable</td>
+                </tr>
+                <tr>
+                    <th>Diámetro</th>
+                    <td>28 cm</td>
+                    <td>26 cm</td>
+                    <td>24 cm</td>
+                </tr>
+                <tr>
+                    <th>Peso</th>
+                    <td>0,9 kg</td>
+                    <td>3,2 kg</td>
+                    <td>1,1 kg</td>
+                </tr>
+                <tr>
+                    <th>Compatibilidad</th>
+                    <td>Gas Vitro Inducción</td>
+                    <td>Gas Vitro Inducción Horno</td>
+                    <td>Gas Vitro Inducción</td>
+                </tr>
+                <tr>
+                    <th>Apto lavavajillas</th>
+                    <td><span class="material-symbols-outlined gray">check_circle</span>Sí</td>
+                    <td><span class="material-symbols-outlined gray">cancel</span>No</td>
+                    <td><span class="material-symbols-outlined gray">check_circle</span>Sí</td>
+                </tr>
+                <tr>
+                    <th>Garantía</th>
+                    <td>2 años</td>
+                    <td>25 años</td>
+                    <td>10 años</td>
+                </tr>
+                <tr>
+                    <th>Valoración</th>
+                    <td> 
+                        <span class="material-symbols-outlined small">star</span>
+                        <span class="material-symbols-outlined small">star</span>
+                        <span class="material-symbols-outlined small">star</span>
+                        <span class="material-symbols-outlined small">star</span>
+                        <span class="material-symbols-outlined small">star_half</span>
+                        (124)
+                    </td>
+                    <td>
+                        <span class="material-symbols-outlined small">star</span>
+                        <span class="material-symbols-outlined small">star</span>
+                        <span class="material-symbols-outlined small">star</span>
+                        <span class="material-symbols-outlined small">star</span>
+                        <span class="material-symbols-outlined small">star_half</span>
+                        (89)
+                    </td>
+                    <td>
+                        <span class="material-symbols-outlined small">star</span>
+                        <span class="material-symbols-outlined small">star</span>
+                        <span class="material-symbols-outlined small">star</span>
+                        <span class="material-symbols-outlined small">star</span>
+                        <span class="material-symbols-outlined small">star</span>
+                        (56)
+                    </td>
+                </tr>
+                <tr>
+                    <th>Acciones</th>
+                    <td>
+                        <a href="producto.html" class="btn-producto">
+                            Ver Producto
+                            <span class="material-symbols-outlined tipoboton">shopping_cart</span>
+                        </a>
+                    </td>
+                    <td>
+                        <a href="producto.html" class="btn-producto">
+                            Ver Producto
+                            <span class="material-symbols-outlined tipoboton">shopping_cart</span>
+                        </a>
+                    </td>
+                    <td>
+                        <a href="producto.html" class="btn-producto">
+                            Ver Producto
+                            <span class="material-symbols-outlined tipoboton">shopping_cart</span>
+                        </a>
+                    </td>
+                </tr>
+            </table>
+        </main>
+
+
+        <!--FOOTER-->
+        <footer>
+            <section class = "informacion">
+                <!--Redes-->
+                <div class = "redes">
+                    <h4>Escala PANS</h4>
+                    <p>Tienda especializada en sartenes y menaje de cocina de alta gama. Pasión por la gastronomía desde el corazón de Araba.</p>
+                    <div class = "iconos">
+                        <a href="#"><img src = "images/facebook.png" alt = "Facebook de Escala Pans"/></a>
+                        <a href="#"><img src = "images/instagram.png" alt = "Instagram de Escala Pans"/></a>
+                        <a href="#"><img src = "images/equis.png" alt = "Twitter de Escala Pans"/></a>
+                    </div>
+                </div>
+                <!--Categorías-->
+                <div class = "footer-categorias">
+                    <h4>Categorías</h4>      
+                    <ul>
+                        <li><a href="#">Antiadherentes</a></li>
+                        <li><a href="#">Acero inoxidable</a></li>
+                        <li><a href="#">Hierro fundido</a></li>
+                        <li><a href="#">Blog & Recetas</a></li>
+                    </ul>
+                </div>
+                <!--Datos de contacto-->
+                <div class="contacto">
+                    <h4>Contacto</h4>
+                    <address>
+                        <p><span class="material-symbols-outlined" aria-label="Dirección">location_on</span>Plaza de la Virgen Blanca, 1 - 01001 Vitoria-Gasteiz</p>
+                        <p><span class="material-symbols-outlined" aria-label="Teléfono">call</span>+34 945 000 000</p>
+                        <p><span class="material-symbols-outlined" aria-label="Correo electrónico">mail</span>info@escala-pans.eus</p>
+                    </address>
+                    <img src = "images/mapa.png" alt = "Mapa de la tienda física Escala, professional pans">
+                </div>
+            </section>
+            <!--Aviso legal y enlaces a políticas de privacidad y cookies-->
+            <section class = "aviso-legal">
+                <p id = "copyright">&copy; 2026 Escala PANS. Todos los derechos reservados.</p>
+                <div class = "avisos-derecha">
+                    <p><a href="#">Aviso Legal</a></p>
+                    <p><a href="#">Privacidad</a></p>
+                    <p><a href="#">Cookies</a></p>
+                </div>
+            </section>
+        </footer>
+    </body>
+
+    <!--Script que carga los productos desde el archivo productos.js-->
+    <script src="scripts/productos.js"></script>
+
+</html>

@@ -112,6 +112,30 @@ main {
     color: var(--textosecundario);
 }
 
+.precio {
+    font-weight: 600;
+    font-family: "Arimo", Arial, sans-serif;
+    color: var(--resaltado);
+    font-size: 1.3em;
+}
+
+button {
+    background-color: var(--resaltado);
+    color: var(--blanco);
+    border: none;
+    border-radius: 5px;
+    padding: 10px 20px;
+    font-size: 0.8em;
+    cursor: pointer;
+
+}
+
+.material-symbols-outlined {
+    font-variation-settings: 'FILL' 1;
+    vertical-align: middle;
+    padding: 0.5em;
+    color: var(--resaltado);
+}
 
 /* 
     HEADER
@@ -260,11 +284,7 @@ footer .footer-categorias ul li a {
 /* Iconos del footer */
 
 footer span.material-symbols-outlined {
-    font-variation-settings: 'FILL' 1;
-    color: var(--resaltado);
     font-size: 1em;
-    vertical-align: middle;
-    margin-right: 0.5em;
 }
 
 /* Imagen del mapa en el footer */

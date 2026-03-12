@@ -6,26 +6,29 @@
 /* 
     Estructura general
 */
+
 .vista-producto {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
     gap: 2em;
-    padding: 2% 17%;
     align-items: center;
 }
+
 
 .imagenes {
     display: flex;
     flex-direction: column;
-    align-items: center;
+    align-items: center; 
 }
 
-.imagenes img {
-    width: 60%;
+.imagenes > img {
+    width: 70%;
+    display: block;
+    margin-bottom: 1rem;
 }
 
 .miniaturas {
-    width: 70%;
+    width: 80%;
     display: grid;
     grid-template-columns: repeat(4, 1fr);
     gap: 2%;
@@ -51,18 +54,12 @@
     color: var(--resaltado);
     font-size: 1.5em;
     vertical-align: middle;
+    padding: 0;
 }
 
 .resenias {
     font-size: 0.8em;
     color: var(--textosecundario);
-}
-
-.precio {
-    font-family: "Arimo", Arial, sans-serif;
-    font-size: 1.5em;
-    font-weight: 600;
-    color: var(--resaltado);
 }
 
 /* 
