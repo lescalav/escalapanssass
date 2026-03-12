@@ -1,0 +1,241 @@
+/* 
+    ESTILOS PARA 
+    PRODUCTO.HTML
+*/
+
+/* 
+    Estructura general
+*/
+.vista-producto {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 2em;
+    padding: 2% 17%;
+    align-items: center;
+}
+
+.imagenes {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.imagenes img {
+    width: 60%;
+}
+
+.miniaturas {
+    width: 70%;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 2%;
+    margin-top: 2%;
+}
+
+.miniaturas img {
+    width: 100%;
+    border-radius: 8px;
+    transition: border .2s ease;
+}
+
+.miniaturas img:hover {
+    border: 2px solid var(--resaltado);
+}
+
+/* 
+    Información principal
+*/
+
+.informacion-principal span {
+    font-variation-settings: 'FILL' 1;
+    color: var(--resaltado);
+    font-size: 1.5em;
+    vertical-align: middle;
+}
+
+.resenias {
+    font-size: 0.8em;
+    color: var(--textosecundario);
+}
+
+.precio {
+    font-family: "Arimo", Arial, sans-serif;
+    font-size: 1.5em;
+    font-weight: 600;
+    color: var(--resaltado);
+}
+
+/* 
+    Tarjetas
+*/
+
+.especificaciones-tecnicas,
+.instrucciones-cuidado {
+    background-color: var(--blanco);
+    border: 1px solid var(--bordeclaro);
+    border-radius: 15px;
+    padding: 0.5em;
+    margin-top: 2em;
+}
+
+.especificaciones-tecnicas h4,
+.instrucciones-cuidado h4 {
+    font-family: "Arimo", Arial, sans-serif;
+    font-size: 0.9em;
+    font-weight: 800;
+    color: var(--texto);
+    margin: 0;
+    padding: 0.5em 0 0.5em 1em;
+}
+
+.especificaciones-tecnicas span,
+.instrucciones-cuidado span {
+    font-variation-settings: 'FILL' 1;
+    color: var(--resaltado);
+    font-size: 1.5em;
+    vertical-align: middle;
+    margin-right: 0.5em;
+}
+
+.especificaciones-tecnicas ul {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+}
+
+/* 
+    Características
+*/
+
+.lista-caracteristicas li {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 1em;
+}
+
+.lista-caracteristicas .atributo {
+    font-size: 0.9em;
+    color: var(--textosecundario);
+}
+
+.lista-caracteristicas .valor {
+    font-size: 0.9em;
+    color: var(--texto);
+}
+
+/* 
+    Cuidados
+*/
+
+.lista-cuidados {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 1em;
+    list-style: none;
+    padding: 0;
+    margin-top: 2%;
+}
+
+.lista-cuidados li {
+    display: grid;
+    grid-template-rows: 1.5em auto;
+    align-items: center;
+    justify-items: center;
+    background-color: #e4ebf3;
+    padding: 1em;
+    border-radius: 8px;
+    text-align: center;
+}
+
+span.texto {
+    font-size: 0.7em;
+    color: var(--texto);
+}
+
+/* 
+    Cantidad y carrito
+*/
+.selecciona-cantidad {
+    margin-top: 5%;
+    display: flex;
+}
+
+.cantidad-input {
+    width: 28%;
+    padding: 2%;
+    border: 1px solid var(--bordeclaro);
+    border-radius: 5px;
+    margin-right: 2%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.cantidad-contador {
+    border: 0;
+    font-size: 1.7em;
+    color: var(--textosecundario);
+    background-color: transparent;
+}
+
+.cantidad-producto {
+    border: none;
+    background: transparent;
+    outline: none;
+    font-size: 1rem;
+    width: 2.5rem;
+    text-align: center;
+}
+
+/* Quitar flechas */
+.cantidad-producto::-webkit-inner-spin-button,
+.cantidad-producto::-webkit-outer-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+}
+
+.cantidad-producto[type=number] {
+    appearance: textfield;
+}
+
+#aniadir-carrito {
+    width: 70%;
+    background-color: var(--resaltado);
+    box-shadow: 2px 2px 2px #bdb5b1;
+    border: 0;
+    color: var(--blanco);
+    font-family: "Arimo", Arial, sans-serif;
+    font-size: 0.8em;
+    font-weight: 600;
+    border-radius: 5px;
+    padding: 2%;
+}
+
+#aniadir-carrito span {
+    font-variation-settings: 'FILL' 1;
+    color: var(--blanco);
+    font-size: 1.8em;
+    vertical-align: middle;
+    margin-right: 0.5em;
+}
+
+/*
+    Información de envío
+*/
+
+.informacion-envio {
+    display: flex;
+    gap: 5%;
+}
+
+.informacion-envio p {
+    font-size: 0.8em;
+    color: var(--textosecundario);
+}
+
+.informacion-envio span {
+    font-variation-settings: 'FILL' 1;
+    color: var(--verde);
+    font-size: 1.5em;
+    vertical-align: middle;
+    margin-right: 0.5em;
+}
