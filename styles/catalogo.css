@@ -154,7 +154,8 @@
     font-size: 2em;
 }
 
-/* ==== PAGINACIÓN ====*/
+/* ==== PAGINACIÓN ====
+Adaptado de https://codepen.io/marhdev/pen/poyNEay */
 
 .paginacion {
     display: flex;

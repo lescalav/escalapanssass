@@ -87,7 +87,8 @@
     color: var(--resaltado);
 }
 
-/*=== SLIDER DE PRECIO ====*/
+/*=== SLIDER DE PRECIO ====
+Adaptado de https://www.youtube.com/watch?v=JxEaJNNDP3Y*/
 
 #slider {
     width: 100%;
