@@ -135,7 +135,17 @@ button {
     vertical-align: middle;
     padding: 0.5em;
     color: var(--resaltado);
+    transition: color var(--transicionbase);  /* añadir */
 }
+
+.material-symbols-outlined.gray {
+    color: var(--textosecundario);
+}
+
+.seleccionar-opciones .material-symbols-outlined:hover {
+    color: var(--resaltado);
+}
+
 
 .grid-carrito {
     display: grid;
@@ -146,27 +156,22 @@ button {
 /* 
     Botón de selección de cantidad
 */
-.selecciona-cantidad {
-    margin-top: 5%;
-    display: flex;
-}
 
 .cantidad-input {
-    width: fit-content;
-    padding: 2%;
+    display: inline-flex;
+    align-items: center;
+    gap: 4px;
+    padding: 4px 8px;
     border: 1px solid var(--bordeclaro);
     border-radius: 5px;
-    margin-right: 2%;
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
 }
 
 .cantidad-contador {
-    border: 0;
     font-size: 1.7em;
+    line-height: 1;
     color: var(--textosecundario);
-    background-color: transparent;
+    padding: 0 4px;
+    flex-shrink: 0;
 }
 
 .cantidad-producto {
@@ -281,10 +286,6 @@ header {
     border-radius: 0 7px 7px 0;
 }
 
-.seleccionar-opciones .material-symbols-outlined:hover {
-    color: var(--resaltado);
-    transition: var(--transicionbase);
-}
 
 /* 
     ESTILOS DEL FOOTER
@@ -317,6 +318,10 @@ footer h4 {
 footer .redes img {
     width: 50px;
     margin-right: 1.5em;
+    transition: var(--transicionbase);
+}
+footer .redes img:hover {
+    transform: scale(1.3);
 }
 
 /* Categorías del footer */
@@ -363,108 +368,10 @@ footer .aviso-legal .avisos-derecha {
     gap: 1em;
 }
 
-/* INDEX.HTML */
-
-/* Estilos para el elemento central del index */
-
-.imagen-central {
-    height: fit-content;
-    padding: 5%;
-    background-image:
-        linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.6)),    
-        url('/images/cocina.png');
-    background-size: cover;
-    background-position: center;
-    display: flex;
-    justify-content: center;
+footer .footer-categorias ul li a:hover {
+    color: var(--resaltado);
 }
 
-.imagen-central div {
-    width: 30%;
-    color: var(--blanco);
-}
-
-.imagen-central p {
-    font-weight: 200;
-    line-height: 1.5em;
-}
-
-.imagen-central button {
-    background-color: var(--resaltado);
-    color: var(--blanco);
-    border: none;
-    border-radius: 5px;
-    padding: 10px 20px;
-    font-size: 0.8em;
-    cursor: pointer;
-    margin-top: 20px;
-}
-
-/* Estilos para el main */
-
-.index-main {
-    display: flex;
-    flex-direction: column;
-    align-items: stretch;
-}
-
-/* Estilos para las categorías */
-
-.categorias {
-    display: grid;
-    grid-template-columns:  repeat(2, 1fr);
-    margin-top: 40px;
-    margin-bottom: 40px;
-    grid-gap: 15px;
-    width: 100%;
-}
-
-.categorias article {
-    border-radius: 15px;
-    height: 200px;
-    color: var(--blanco);
-    display: flex;
-    flex-direction: column;       
-    justify-content: flex-end;    
-    align-items: flex-start;
-    padding: 3%;      
-}
-
-.categorias article h2,
-.categorias article p {
-    margin: 0;           
-    padding: 0;          
-    line-height: 1.5em; 
-}
-
-#antihaderentes {
-    background-image:
-        linear-gradient(to top, rgba(0,0,0,0.4) 0%, rgba(0,0,0,0) 100%),
-        url('/images/antiadherente.png');
-    background-size: cover;
-    background-position: center;
-}
-
-#acero-inoxidable {
-    background-image:
-        linear-gradient(to top, rgba(0,0,0,0.4) 0%, rgba(0,0,0,0) 100%),
-        url('/images/inox2.png');
-    background-size: cover;
-    background-position: center;
-}
-
-#hierro-fundido {
-    background-image:
-        linear-gradient(to top, rgba(0,0,0,0.4) 0%, rgba(0,0,0,0) 100%),
-        url('/images/hierro2.png');
-    background-size: cover;
-    background-position: center;
-}
-
-#wok {
-    background-image:
-        linear-gradient(to top, rgba(0,0,0,0.4) 0%, rgba(0,0,0,0) 100%),
-        url('/images/wok.png');
-    background-size: cover;
-    background-position: center;
+footer a:hover {
+    color: var(--resaltado)
 }

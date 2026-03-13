@@ -7,11 +7,10 @@ table {
     width: 100%;
     text-align: center;
     border: 1px solid var(--bordeclaro);
-    border-radius: 15px;
     margin-bottom: 4%;
     border-radius: 10px;
-    /*box-shadow: 0 4px 4px rgba(0,0,0,0.1);
-    overflow: hidden; /* Clips the table corners */
+    box-shadow: 0 4px 4px rgba(0,0,0,0.1);
+    overflow: hidden; 
 }
 
 #tabla-comparativa {
@@ -57,9 +56,7 @@ th {
     padding: 0;
 }
 
-.material-symbols-outlined.gray {
-    color: var(--textosecundario);
-}
+
 
 .material-symbols-outlined.tipoboton {
     color: white;
@@ -78,6 +75,7 @@ th {
 
 #carrito {
     table-layout: auto;
+    align-items: start;
 }
 
 #carrito td.celda-imagen {
@@ -87,15 +85,14 @@ th {
 #carrito tr th {
     text-align: center;
     vertical-align: middle;
-    /*border-top: 0;*/
     color: var(--textosecundario);
     padding: 2em;
-   /* border: 0;*/
 }
 
 .celda-imagen {
     display: flex;
     align-items: center;
+    justify-items: flex-start;
     gap: 1rem;
     text-align: left;
 }
@@ -104,7 +101,7 @@ th {
     width: 60px;
     flex-shrink: 0;
     margin-left: 2em;
-    background-color: white;
+    background-color: white;   
 }
 
 
@@ -125,8 +122,9 @@ th {
     background-color: white;
     border: 1px solid var(--bordeclaro);
     padding: 0 1em 1em 1em;
-    border-radius: 5px;
-    height:max-content;
+    border-radius: 10px;
+    height:fit-content;
+    margin-bottom: 8%;
 }
 
 .resumen-pedido div {
@@ -139,4 +137,22 @@ th {
     font-weight: 600;
     width: 100%;
     padding: 5%;
+}
+
+.total {
+    border-top: 1px solid var(--bordeclaro);
+}
+
+.total p {
+    font-weight: 600;
+}
+
+.datos-adicionales-compra {
+    text-align: center;
+    margin: 0;
+    color: var(--textosecundario);
+}
+
+.texto-tiny {
+    font-size: 0.7em;
 }

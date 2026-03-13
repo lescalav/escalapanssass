@@ -149,38 +149,12 @@ span.texto {
 }
 
 /* 
-    Cantidad y carrito
+    Carrito
 */
+
 .selecciona-cantidad {
     margin-top: 5%;
     display: flex;
-}
-
-.cantidad-input {
-    width: 28%;
-    padding: 2%;
-    border: 1px solid var(--bordeclaro);
-    border-radius: 5px;
-    margin-right: 2%;
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-}
-
-.cantidad-contador {
-    border: 0;
-    font-size: 1.7em;
-    color: var(--textosecundario);
-    background-color: transparent;
-}
-
-.cantidad-producto {
-    border: none;
-    background: transparent;
-    outline: none;
-    font-size: 1rem;
-    width: 2.5rem;
-    text-align: center;
 }
 
 /* Quitar flechas */
