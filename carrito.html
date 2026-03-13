@@ -6,7 +6,7 @@
         <meta name = "viewport" content = "width=device-width, initial-scale=1.0"/>
         <title>ESCALA Pans</title>
         <link rel = "stylesheet" href = "styles/styles.css"/>
-        <link rel = "stylesheet" href = "styles/carrito.css"/>
+        <link rel = "stylesheet" href = "styles/comparar.css"/>
         <link rel="icon" type="image/png" href="images/favicon.png">
         <!-- Google Fonts -->
         <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -50,6 +50,89 @@
                 <p>Revisa tus productos antes de finalizar la compra</p>
             </div>
 
+            <div class="grid-carrito">
+                <table id="carrito">
+                    <thead>
+                        <tr>
+                            <th>PRODUCTO</th>
+                            <th>PRECIO</th>
+                            <th>CANTIDAD</th>
+                            <th>TOTAL</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>
+                                <div class="celda-imagen">
+                                    <img src="images/antiadherente.png" alt="Vista general de la Sartén Antiadherente Pro">
+                                    <div>
+                                        <h4 class="nombre-producto">Sartén Antiadherente Pro</h4>
+                                        <p class="texto-small">28 cm • Aluminio forjado</p>
+                                    </div>
+                                </div>
+                            </td>
+                            <td>78,00 €</td>
+                            <td>
+                                <div class="cantidad-input">
+                                    <button class="cantidad-contador cantidad-contador--menos" data-action="menos" type="button">-</button>
+                                    <input class="cantidad-producto" type="number" name="cantidad-producto-1" min="1" max="10" value="1">
+                                    <button class="cantidad-contador cantidad-contador--mas" data-action="mas" type="button">+</button>
+                                </div>
+                            </td>
+                            <td class="celda-precio">
+                                78,00 €
+                                <button class="material-symbols-outlined">delete</button>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <div class="celda-imagen">
+                                    <img src="images/antiadherente.png" alt="Vista general de la Sartén Antiadherente Pro">
+                                    <div>
+                                        <h4 class="nombre-producto">Sartén Antiadherente Pro</h4>
+                                        <p class="texto-small">28 cm • Aluminio forjado</p>
+                                    </div>
+                                </div>
+                            </td>
+                            <td>89,00 €</td>
+                            <td>
+                                <div class="cantidad-input">
+                                    <button class="cantidad-contador cantidad-contador--menos" data-action="menos" type="button">-</button>
+                                    <input class="cantidad-producto" type="number" name="cantidad-producto-2" min="1" max="10" value="1">
+                                    <button class="cantidad-contador cantidad-contador--mas" data-action="mas" type="button">+</button>
+                                </div>
+                            </td>
+                            <td class="celda-precio">
+                                89,00 €
+                                <button class="material-symbols-outlined">delete</button>
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+
+                <aside class="resumen-pedido">
+                    <h4>Resumen del Pedido</h4>
+                    <div>
+                        <p class="texto-small">Subtotal</p>
+                        <p class="texto-small">168,00 €</p>
+                    </div>
+                    <div>
+                        <p class="texto-small">Envío</p>
+                        <p class="texto-small">Gratis</p>
+                    </div>
+                    <div>
+                        <p class="texto-small">IVA</p>
+                        <p class="texto-small">35,28 €</p>
+                    </div>
+                    <div class="total">
+                        <p>Total</p>
+                        <p>203,28 €</p>
+                    </div>
+
+                    <button id="boton-pago">Proceder al Pago</button>
+                </aside>
+
+            </div>
         </main>
 
         <!--FOOTER-->

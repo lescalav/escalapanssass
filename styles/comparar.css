@@ -9,15 +9,26 @@ table {
     border: 1px solid var(--bordeclaro);
     border-radius: 15px;
     margin-bottom: 4%;
-    table-layout: fixed;
     border-radius: 10px;
-  box-shadow: 0 4px 4px rgba(0,0,0,0.1);
-  overflow: hidden; /* Clips the table corners */
+    /*box-shadow: 0 4px 4px rgba(0,0,0,0.1);
+    overflow: hidden; /* Clips the table corners */
+}
+
+#tabla-comparativa {
+    table-layout: fixed;
+}
+
+table h4 {
+    margin-bottom: 0;
+}
+
+table p {
+    margin-top: 0;
 }
 
 table img {
-    width: stretch;
-    display: block;
+    width: 100%;
+    height: auto;
 }
 
 td {
@@ -58,4 +69,74 @@ th {
     padding: 2% 10% 2% 10%;
     margin-left: 1em;
     box-shadow: 4px 4px 5px rgba(0,0,0,0.1);
+}
+
+/* 
+    ESTILOS PARA EL
+    CARRITO (TABLA Y ELEMENTOS)
+*/
+
+#carrito {
+    table-layout: auto;
+}
+
+#carrito td.celda-imagen {
+    width: 20%;
+}
+
+#carrito tr th {
+    text-align: center;
+    vertical-align: middle;
+    /*border-top: 0;*/
+    color: var(--textosecundario);
+    padding: 2em;
+   /* border: 0;*/
+}
+
+.celda-imagen {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    text-align: left;
+}
+
+.celda-imagen img {
+    width: 60px;
+    flex-shrink: 0;
+    margin-left: 2em;
+    background-color: white;
+}
+
+
+#carrito button {
+    background-color: transparent;
+}
+
+.celda-precio {
+    font-weight: 600;
+}
+
+.texto-small {
+    color: var(--textosecundario);
+    font-size: small;
+}
+
+.resumen-pedido {
+    background-color: white;
+    border: 1px solid var(--bordeclaro);
+    padding: 0 1em 1em 1em;
+    border-radius: 5px;
+    height:max-content;
+}
+
+.resumen-pedido div {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+}
+#boton-pago {
+    font-weight: 600;
+    width: 100%;
+    padding: 5%;
 }

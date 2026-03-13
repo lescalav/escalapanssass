@@ -124,7 +124,7 @@ button {
     color: var(--blanco);
     border: none;
     border-radius: 5px;
-    padding: 10px 20px;
+    padding: 2% 5%;
     font-size: 0.8em;
     cursor: pointer;
 
@@ -135,6 +135,58 @@ button {
     vertical-align: middle;
     padding: 0.5em;
     color: var(--resaltado);
+}
+
+.grid-carrito {
+    display: grid;
+    grid-template-columns: 3fr 1fr;
+    gap: 2%;
+}
+
+/* 
+    Botón de selección de cantidad
+*/
+.selecciona-cantidad {
+    margin-top: 5%;
+    display: flex;
+}
+
+.cantidad-input {
+    width: fit-content;
+    padding: 2%;
+    border: 1px solid var(--bordeclaro);
+    border-radius: 5px;
+    margin-right: 2%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.cantidad-contador {
+    border: 0;
+    font-size: 1.7em;
+    color: var(--textosecundario);
+    background-color: transparent;
+}
+
+.cantidad-producto {
+    border: none;
+    background: transparent;
+    outline: none;
+    font-size: 1rem;
+    width: 2.5rem;
+    text-align: center;
+}
+
+/* Quitar flechas */
+.cantidad-producto::-webkit-inner-spin-button,
+.cantidad-producto::-webkit-outer-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+}
+
+.cantidad-producto[type=number] {
+    appearance: textfield;
 }
 
 /* 
