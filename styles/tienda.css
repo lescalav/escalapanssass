@@ -1,11 +1,9 @@
-/* 
-    ESTILOS PARA 
-    TIENDA.HTML
+/*
+    Estilos del carrito
+    Usado en: carrito.html
 */
 
-/*
-    Estructura general
-*/
+/*=== ESTRUCTURA GENERAL ====*/
 
 .grid-tienda {
     display: grid;
@@ -38,9 +36,7 @@
     font-weight: 600;
 }
 
-/* 
-    Filtros de ordenación
-*/
+/*=== FILTROS DE ORDENACIÓN ====*/
 
 .opcion {
     display: flex;
@@ -56,9 +52,7 @@
     display: block;
 }
 
-/* 
-    Selector de diámetro
-*/
+/*=== SELECTOR DE DIÁMETRO ====*/
 
 .filtro-diametro {
     display: flex;
@@ -93,9 +87,7 @@
     color: var(--resaltado);
 }
 
-/* 
-    Slider de precio
-*/
+/*=== SLIDER DE PRECIO ====*/
 
 #slider {
     width: 100%;

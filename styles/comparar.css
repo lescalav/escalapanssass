@@ -1,7 +1,9 @@
-/* 
-    ESTILOS PARA EL
-    COMPARADOR (TABLA Y ELEMENTOS)
+/*
+    Estilos del comparador
+    Usado en: comparar.html
 */
+
+/* === TABLA COMPARATIVA === */
 
 table {
     width: 100%;
@@ -56,7 +58,7 @@ th {
     padding: 0;
 }
 
-
+/* === ICONOS === */
 
 .material-symbols-outlined.tipoboton {
     color: white;
@@ -66,93 +68,4 @@ th {
     padding: 2% 10% 2% 10%;
     margin-left: 1em;
     box-shadow: 4px 4px 5px rgba(0,0,0,0.1);
-}
-
-/* 
-    ESTILOS PARA EL
-    CARRITO (TABLA Y ELEMENTOS)
-*/
-
-#carrito {
-    table-layout: auto;
-    align-items: start;
-}
-
-#carrito td.celda-imagen {
-    width: 20%;
-}
-
-#carrito tr th {
-    text-align: center;
-    vertical-align: middle;
-    color: var(--textosecundario);
-    padding: 2em;
-}
-
-.celda-imagen {
-    display: flex;
-    align-items: center;
-    justify-items: flex-start;
-    gap: 1rem;
-    text-align: left;
-}
-
-.celda-imagen img {
-    width: 60px;
-    flex-shrink: 0;
-    margin-left: 2em;
-    background-color: white;   
-}
-
-
-#carrito button {
-    background-color: transparent;
-}
-
-.celda-precio {
-    font-weight: 600;
-}
-
-.texto-small {
-    color: var(--textosecundario);
-    font-size: small;
-}
-
-.resumen-pedido {
-    background-color: white;
-    border: 1px solid var(--bordeclaro);
-    padding: 0 1em 1em 1em;
-    border-radius: 10px;
-    height:fit-content;
-    margin-bottom: 8%;
-}
-
-.resumen-pedido div {
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-    justify-content: space-between;
-}
-#boton-pago {
-    font-weight: 600;
-    width: 100%;
-    padding: 5%;
-}
-
-.total {
-    border-top: 1px solid var(--bordeclaro);
-}
-
-.total p {
-    font-weight: 600;
-}
-
-.datos-adicionales-compra {
-    text-align: center;
-    margin: 0;
-    color: var(--textosecundario);
-}
-
-.texto-tiny {
-    font-size: 0.7em;
 }

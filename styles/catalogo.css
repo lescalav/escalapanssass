@@ -1,16 +1,9 @@
-/* 
-    ESTILOS PARA EL
-    CATÁLOGO COMPLETO
+/*
+    Estilos del catálogo de productos
+    Usado en: index.html, tienda.html
 */
 
-/* Estructura */
-
-.catalogo-completo {
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    gap: 2em;
-    margin-bottom: 40px;
-}
+/* ==== ESTRUCTURA GENERAL ====*/
 
 .separador {
     display: flex;
@@ -19,10 +12,17 @@
     margin-bottom: 1em;
 }
 
-/* Estilos para cada producto */
+.catalogo-completo {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 2em;
+    margin-bottom: 40px;
+}
+
+/* ==== TARJETA DE PRODUCTO ====*/
 
 .catalogo-completo article {
-    background-color: #FFFFFF;
+    background-color: var(--blanco);
     border: 1px solid var(--bordeclaro);
     border-radius: 15px;
 }
@@ -34,28 +34,40 @@
     overflow: hidden;
     border-radius: 15px 15px 0 0;
     margin: 0;
-    background-color: #F5F5F4;
+    background-color: var(--fondoclaro);
     position: relative;
 }
 
 .producto-imagen img {
     width: 60%;
-    padding: 2em 0 2em 0;
+    padding: 2em 0;
 }
 
 .producto-info {
     padding-left: 1em;
 }
 
-/* Estilos de etiquetas de productos */
+.producto-info h3 {
+    color: var(--texto);
+    margin: 0;
+    padding-top: 1em;
+}
+
+.producto-info p {
+    color: var(--textosecundario);
+    padding-top: 0.5em;
+    margin: 0;
+}
+
+/* ==== ETIQUETAS ====*/
 
 .producto-imagen .etiqueta {
     font-family: 'League Spartan', sans-serif;
     font-weight: 600;
     letter-spacing: 0.1dvh;
-    position:absolute;
+    position: absolute;
     top: 10%;
-    color: white;
+    color: var(--blanco);
     font-size: 0.7em;
     padding: 0.5em 1em;
     border-radius: 12px;
@@ -70,49 +82,35 @@
     right: 5%;
 }
 
-/* Colores de etiquetas */
-
-.producto-imagen .etiqueta-azul {
+.etiqueta-azul {
     background-color: #635bff;
 }
 
-.producto-imagen .etiqueta-amarilla {
+.etiqueta-amarilla {
     background-color: #F9A825;
 }
 
-.producto-imagen .etiqueta-verde {
-    background-color: #078C5B;
+.etiqueta-verde {
+    background-color: var(--verde);
 }
 
-.producto-imagen .etiqueta-morada {
+.etiqueta-morada {
     background-color: #8E24AA;
 }
 
-.producto-imagen .etiqueta-naranja {
-    background-color: #E64C19;
+.etiqueta-naranja {
+    background-color: var(--resaltado);
 }
 
-.producto-imagen .etiqueta-gris {
+.etiqueta-gris {
     background-color: #8E939E;
 }
 
-.producto-imagen .etiqueta-roja {
+.etiqueta-roja {
     background-color: #DC2626;
 }
 
-/* Fin colores de etiquetas */
-
-.producto-info p {
-    color:#727986;
-    padding-top: 0.5em;
-    margin: 0;
-}
-
-.producto-info h3 {
-    color: #1C1917;
-    margin: 0;
-    padding-top: 1em;
-}
+/* ==== CARACTERÍSTICAS LISTA ====*/
 
 .caracteristicas {
     list-style: none;
@@ -121,23 +119,24 @@
 }
 
 .caracteristicas span {
-    fill:#727986;
     font-size: 1.2em;
     vertical-align: middle;
     padding-left: 0;
 }
 
 .caracteristicas li {
-    color: #727986;
+    color: var(--textosecundario);
     line-height: 1.5em;
     font-size: 0.9em;
 }
+
+/* ==== COMPRAR O VER ====*/
 
 .producto-acciones {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding:15px;
+    padding: 15px;
 }
 
 .producto-acciones button {
@@ -155,7 +154,7 @@
     font-size: 2em;
 }
 
-/* Estilos de paginación */
+/* ==== PAGINACIÓN ====*/
 
 .paginacion {
     display: flex;
@@ -174,16 +173,15 @@
 .paginacion li a {
     display: block;
     padding: 7px 12px;
-    text-decoration: none;
     border: 1px solid var(--bordeclaro);
-    color: #727986;
+    color: var(--textosecundario);
     font-size: 0.9em;
     font-weight: 600;
-    background-color: #FFFFFF;
+    background-color: var(--blanco);
     border-radius: 5px;
 }
 
 .paginacion li a.active {
     background-color: var(--resaltado);
-    color: white;
+    color: var(--blanco);
 }

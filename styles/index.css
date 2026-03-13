@@ -1,12 +1,14 @@
-/* INDEX.HTML */
+/*
+    Estilos de index.html
+*/
 
-/* Estilos para el elemento central del index */
+/* ==== IMAGEN CENTRAL ====*/
 
 .imagen-central {
     height: fit-content;
     padding: 5%;
     background-image:
-        linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.6)),    
+        linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)),
         url('/images/cocina.png');
     background-size: cover;
     background-position: center;
@@ -25,17 +27,10 @@
 }
 
 .imagen-central button {
-    background-color: var(--resaltado);
-    color: var(--blanco);
-    border: none;
-    border-radius: 5px;
-    padding: 10px 20px;
-    font-size: 0.8em;
-    cursor: pointer;
     margin-top: 20px;
 }
 
-/* Estilos para el main */
+/* ==== ESTRUCTURA GENERAL ====*/
 
 .index-main {
     display: flex;
@@ -43,14 +38,14 @@
     align-items: stretch;
 }
 
-/* Estilos para las categorías */
+/* ==== TARJETAS DE CATEGORÍAS ====*/
 
 .categorias {
     display: grid;
-    grid-template-columns:  repeat(2, 1fr);
+    grid-template-columns: repeat(2, 1fr);
     margin-top: 40px;
     margin-bottom: 40px;
-    grid-gap: 15px;
+    gap: 15px;
     width: 100%;
 }
 
@@ -59,22 +54,22 @@
     height: 200px;
     color: var(--blanco);
     display: flex;
-    flex-direction: column;       
-    justify-content: flex-end;    
+    flex-direction: column;
+    justify-content: flex-end;
     align-items: flex-start;
-    padding: 3%;      
+    padding: 3%;
 }
 
 .categorias article h2,
 .categorias article p {
-    margin: 0;           
-    padding: 0;          
-    line-height: 1.5em; 
+    margin: 0;
+    padding: 0;
+    line-height: 1.5em;
 }
 
 #antiadherentes {
     background-image:
-        linear-gradient(to top, rgba(0,0,0,0.4) 0%, rgba(0,0,0,0) 100%),
+        linear-gradient(to top, rgba(0, 0, 0, 0.4) 0%, rgba(0, 0, 0, 0) 100%),
         url('/images/antiadherente.png');
     background-size: cover;
     background-position: center;
@@ -82,7 +77,7 @@
 
 #acero-inoxidable {
     background-image:
-        linear-gradient(to top, rgba(0,0,0,0.4) 0%, rgba(0,0,0,0) 100%),
+        linear-gradient(to top, rgba(0, 0, 0, 0.4) 0%, rgba(0, 0, 0, 0) 100%),
         url('/images/inox2.png');
     background-size: cover;
     background-position: center;
@@ -90,7 +85,7 @@
 
 #hierro-fundido {
     background-image:
-        linear-gradient(to top, rgba(0,0,0,0.4) 0%, rgba(0,0,0,0) 100%),
+        linear-gradient(to top, rgba(0, 0, 0, 0.4) 0%, rgba(0, 0, 0, 0) 100%),
         url('/images/hierro2.png');
     background-size: cover;
     background-position: center;
@@ -98,7 +93,7 @@
 
 #wok {
     background-image:
-        linear-gradient(to top, rgba(0,0,0,0.4) 0%, rgba(0,0,0,0) 100%),
+        linear-gradient(to top, rgba(0, 0, 0, 0.4) 0%, rgba(0, 0, 0, 0) 100%),
         url('/images/wok.png');
     background-size: cover;
     background-position: center;
