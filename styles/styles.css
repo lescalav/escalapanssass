@@ -135,7 +135,7 @@ button {
     vertical-align: middle;
     padding: 0.5em;
     color: var(--resaltado);
-    transition: color var(--transicionbase);  /* añadir */
+    transition: color var(--transicionbase);
 }
 
 .material-symbols-outlined.gray {
