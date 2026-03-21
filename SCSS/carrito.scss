@@ -1,0 +1,88 @@
+@use 'styles.scss' as *;
+
+/*
+    Estilos del carrito
+    Usado en: carrito.html
+*/
+
+/* ==== ESTRUCTURA GENERAL ====*/
+
+.grid-carrito {
+    display: grid;
+    grid-template-columns: 3fr 1fr;
+    gap: 2%;
+    align-items: start;
+}
+
+/* ==== TABLA ====*/
+
+#carrito {
+    table-layout: auto;
+
+    thead th {
+        text-align: center;
+        vertical-align: middle;
+        color: $textosecundario;
+        padding: 2em;
+    }
+
+    button {
+        background-color: transparent;
+    }
+}
+
+/* ==== CELDAS ====*/
+
+.celda-imagen {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    text-align: left;
+
+    img {
+        width: 60px;
+        flex-shrink: 0;
+        margin-left: 2em;
+        background-color: $blanco;
+    }
+}
+
+.celda-precio {
+    font-weight: 600;
+}
+
+
+/* ==== RESUMEN DEL PEDIDO ====*/
+
+.resumen-pedido {
+    background-color: var(--blanco);
+    border: 1px solid var(--bordeclaro);
+    padding: 0 1em 1em 1em;
+    border-radius: 10px;
+    height: fit-content;
+    margin-bottom: 8%;
+
+    div {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: space-between;
+    }
+}
+
+.total {
+    border-top: $bordedefault;
+    .total p { font-weight: 600; }
+}
+
+#boton-pago {
+    font-weight: 600;
+    width: 100%;
+    padding: 5%;
+}
+
+.datos-adicionales-compra {
+    text-align: center;
+    margin: 0;
+    color: $textosecundario;
+}

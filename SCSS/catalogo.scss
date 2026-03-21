@@ -27,6 +27,18 @@
     }
 }
 
+/* ==== USO DE @MEDIA PARA AJUSTAR EL TAMAÑO ====*/
+
+@media all and (max-width: $tablet) {
+    .catalogo-completo {
+        display: flex;
+        flex-wrap: wrap;
+        padding-bottom: 2%;
+        justify-content: center;
+    }
+}
+
+
 .producto-imagen {
     display: flex;
     align-content: center;

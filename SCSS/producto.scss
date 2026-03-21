@@ -1,0 +1,197 @@
+@use 'styles.scss' as *;
+
+/*
+    Estilos de la vista de cada producto
+    Usado en: producto.html
+*/
+
+/* ==== ESTRUCTURA GENERAL ====*/
+
+.vista-producto {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 2em;
+    align-items: center;
+}
+
+/* ==== IMAGEN PRINCIPAL Y CARRUSEL ====*/
+
+.imagenes {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.imagenes > img {
+    width: 70%;
+    display: block;
+    margin-bottom: 1rem;
+}
+
+.miniaturas {
+    width: 80%;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 2%;
+    margin-top: 2%;
+
+    img {
+        width: 100%;
+        border-radius: 8px;
+        transition: outline $transicionbase - 200ms; /* ==== OPERADOR ARITMÉTICO ====*/
+
+        &:hover {
+            outline: 2px solid $resaltado;
+        }
+    }
+}
+
+/* ==== INFORMACIÓN PRINCIPAL ====*/
+
+.informacion-principal span {
+    font-variation-settings: 'FILL' 1;
+    color: $resaltado;
+    font-size: 1.5em;
+    vertical-align: middle;
+    padding: 0;
+}
+
+.resenias {
+    font-size: 0.8em;
+    color: $textosecundario;
+}
+
+/* ==== SECCIONES DE ESPECIFICACIONES TÉCNICAS Y CUIDADOS ====*/
+
+.especificaciones-tecnicas,
+.instrucciones-cuidado {
+    background-color: $blanco;
+    border: $bordedefault;
+    border-radius: 15px;
+    padding: $espaciadobase;
+    margin-top: 2em;
+}
+
+.especificaciones-tecnicas h4,
+.instrucciones-cuidado h4 {
+    font-family: "Arimo", Arial, sans-serif;
+    font-size: 0.9em;
+    font-weight: 800;
+    color: $texto;
+    margin: 0;
+    padding: 0.5em 0 0.5em 1em;
+}
+
+.especificaciones-tecnicas span,
+.instrucciones-cuidado span {
+    font-variation-settings: 'FILL' 1;
+    color: $resaltado;
+    font-size: 1.5em;
+    vertical-align: middle;
+    margin-right: 0.5em;
+}
+
+.especificaciones-tecnicas ul {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    padding-left: 1em;
+}
+
+/* ==== LISTA DE CARACTERÍSTICAS ====*/
+
+.lista-caracteristicas {
+    li {
+        display: flex;
+        flex-direction: column;
+        margin-bottom: 1em;
+    }
+
+    .atributo {
+        font-size: 0.9em;
+        color: $textosecundario;
+    }
+
+    .valor {
+        font-size: 0.9em;
+        color: $texto;
+    }
+}
+
+/* ==== INSTRUCCIONES DE CUIDADO ====*/
+
+.lista-cuidados {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 1em;
+    list-style: none;
+    padding: 0;
+    margin-top: 2%;
+
+    li {
+        display: grid;
+        grid-template-rows: 1.5em auto;
+        align-items: center;
+        justify-items: center;
+        background-color: #e4ebf3;
+        padding: 1em;
+        border-radius: 8px;
+        text-align: center;
+    }
+
+}
+
+span.texto {
+    font-size: 0.7em;
+    color: $texto;
+}
+
+/* ==== BOTÓN SELECCIONAR CANTIDAD ====*/
+
+.selecciona-cantidad {
+    width: 100%;
+    gap: 2%;
+}
+
+/* ==== BOTÓN AÑADIR AL CARRITO ====*/
+
+#aniadir-carrito {
+    width: 100%;
+    background-color: $resaltado;
+    box-shadow: 2px 2px 2px #bdb5b1;
+    border: 0;
+    color: $blanco;
+    font-family: "Arimo", Arial, sans-serif;
+    font-size: 0.8em;
+    font-weight: 600;
+    border-radius: 5px;
+    padding: 2%;
+
+    span {
+        font-variation-settings: 'FILL' 1;
+        color: $blanco;
+        font-size: 1.8em;
+        vertical-align: middle;
+        margin-right: 0.5em;
+    }
+}
+
+/* ==== INFO DE ENVÍO ====*/
+
+.informacion-envio {
+    display: flex;
+    gap: 5%;
+
+    p {
+        font-size: 0.8em;
+        color: $textosecundario;
+    }
+
+    span {
+        font-variation-settings: 'FILL' 1;
+        color: $verde;
+        font-size: 1.5em;
+        vertical-align: middle;
+        margin-right: 0.5em;
+    }
+}
+

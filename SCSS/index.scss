@@ -27,7 +27,7 @@
         font-weight: 200;
         line-height: 1.5em;
     }
-    
+
     button { margin-top: 20px; }
 }
 
@@ -93,4 +93,14 @@
 
 #wok {
     @include tipo_sartenes('wok.png');
+}
+
+/* ==== USO DE @MEDIA PARA AJUSTAR TAMANO  ====*/
+
+@media all and (max-width: $tablet) { 
+    .imagen-central {
+        padding: 2%;
+
+        div { width: 70%; }
+    }
 }
