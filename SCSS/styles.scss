@@ -1,0 +1,359 @@
+/* ==== VARIABLES ====*/
+
+$texto:            #1a1b1e;
+$textosecundario:  #727986;
+$fondo:            #F8F6F6;
+$fondoclaro:       #fff5f5;
+$blanco:           #FFFFFF;
+$resaltado:        #E64C19;
+$verde:            #078C5B;
+$morado:           #4843D9;
+$fondooscuro:      #1C1917;
+$bordeclaro:       #d9d7d7;
+$transicionbase:   300ms;
+$tipografia:       'Montserrat';
+$rutaimg:          '../images/';
+$bordedefault:     1px solid #{$bordeclaro};  
+
+
+/* ==== RESET CSS — Meyer v2.0 ====*/
+
+html, body, div, span, applet, object, iframe,
+blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed,
+figure, figcaption, footer, header, hgroup,
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    font-size: 100%;
+    font: inherit;
+    vertical-align: baseline;
+}
+
+article, aside, details, figcaption, figure,
+footer, header, hgroup, menu, nav, section {
+    display: block;
+}
+
+body {
+    line-height: 1.5;
+}
+
+ol, ul {
+    list-style: none;
+}
+
+blockquote, q {
+    quotes: none;
+}
+
+blockquote:before, blockquote:after,
+q:before, q:after {
+    content: '';
+    content: none;
+}
+
+table {
+    border-collapse: collapse;
+    border-spacing: 0;
+}
+
+/* ==== ESTILOS BASE ====*/
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    font-family: $tipografia, Arial, sans-serif;
+    background-color: $fondo;
+    color: $texto;
+}
+
+a {
+    color: inherit;
+    text-decoration: none;
+    transition: color $transicionbase;
+}
+
+button, a {
+    cursor: pointer;
+}
+
+address {
+    font-style: normal;
+}
+
+/* ==== ESTRUCTURA GLOBAL ====*/
+
+main {
+    padding: 0 17%;
+}
+
+.titulo {
+    margin-bottom: 3%;
+    border-bottom: $bordedefault;
+    padding: 2% 0;
+    p { color: $textosecundario } /* ==== REGLA ANIDADA ====*/
+}
+
+
+/* ==== TIPOGRAFÍAS ====*/
+
+.precio {
+    font-weight: 600;
+    font-family: "Arimo", Arial, sans-serif;
+    color: $resaltado;
+    font-size: 1.3em;
+}
+
+.texto-small {
+    color: $textosecundario;
+    font-size: small;
+}
+
+.texto-tiny {
+    font-size: 0.7em;
+}
+
+/* ==== BOTONES ====*/
+
+button {
+    background-color: $resaltado;
+    color: $blanco;
+    border: none;
+    border-radius: 5px;
+    padding: 2% 5%;
+    font-size: 0.8em;
+    cursor: pointer;
+}
+
+/* ==== ÍCONOS DE GOOGLE ====*/
+
+.material-symbols-outlined {
+    font-variation-settings: 'FILL' 1;
+    vertical-align: middle;
+    padding: 0.5em;
+    color: $resaltado;
+    transition: color $transicionbase;
+    &.gray { color: $textosecundario; }
+    &.small {
+        font-size: 1em;
+        padding: 0;
+    }
+}
+
+/* ==== SELECTOR DE CANTIDAD ====*/
+
+.selecciona-cantidad {
+    margin-top: 5%;
+    display: flex;
+}
+
+.cantidad-input {
+    display: inline-flex;
+    align-items: center;
+    gap: 4px;
+    padding: 4px 8px;
+    border: $bordedefault;
+    border-radius: 5px;
+}
+
+.cantidad-contador {
+    font-size: 1.7em;
+    line-height: 1;
+    color: $textosecundario;
+    padding: 0 4px;
+    flex-shrink: 0;
+    background-color: transparent;
+    border: 0;
+}
+
+.cantidad-producto {
+    border: none;
+    background: transparent;
+    outline: none;
+    font-size: 1rem;
+    width: 2.5rem;
+    text-align: center;
+}
+
+.cantidad-producto::-webkit-inner-spin-button,
+.cantidad-producto::-webkit-outer-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+}
+
+.cantidad-producto[type=number] {
+    appearance: textfield;
+}
+
+/* ==== HEADER ====*/
+
+header {
+    background-color: $blanco;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    width: 100%;
+    padding: 1% 17%;
+        /* ==== REGLA ANIDADA  ====*/
+        img {
+            height: 50px;
+            width: auto;
+        }
+}
+
+/* ==== MENU ====*/
+
+#menu-principal { 
+    /* ==== REGLAS ANIDADAS  ====*/
+    ul {
+        display: flex;
+        gap: 1.5em;
+    }
+    a {
+    font-weight: 500;
+    color: $textosecundario;
+        &:hover { color: $resaltado }
+
+        &.activo {
+            color: $resaltado;
+            font-weight: 700;
+        }
+    }
+}
+
+/* ==== OPCIONES ADICIONALES ====*/
+
+.seleccionar-opciones {
+    display: flex;
+    align-items: center;
+    gap: 2em;
+
+    button {
+    background-color: transparent;
+    border: $bordedefault;
+    color: $texto;
+    padding: 5px 12px;
+    font-size: 0.8em;
+    font-weight: 400;
+    box-shadow: 0 2px 2px -2px rgba(0, 0, 0, 0.1);
+    margin: 0;
+    transition:
+        background-color $transicionbase,
+        color $transicionbase,
+        border-color $transicionbase;
+
+        &:hover {
+            background-color: $resaltado;
+            color: $blanco;
+            border-color: $resaltado;
+        }
+    }
+}
+
+.botones-idiomas {
+    display: flex;
+}
+
+.seleccionar-opciones .material-symbols-outlined:hover {
+    color: $resaltado;
+}
+
+#espaniol {
+    border-right: 0;
+    border-radius: 7px 0 0 7px;
+    background-color: $fondo;
+    color: $resaltado;
+}
+
+#euskera {
+    border-left: 0;
+    border-radius: 0 7px 7px 0;
+}
+
+/* ==== FOOTER ====*/
+
+footer {
+    background-color: $fondooscuro;
+    color: $blanco;
+    font-weight: 200;
+
+    h4 {
+        margin-bottom: 0.8em;
+        font-size: 1.2em;
+    }
+
+    .informacion {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        padding: 2% 17%;
+        align-items: start;
+        font-size: 0.9em;
+        gap: 2em;
+    }
+
+    .redes img {
+        width: 50px;
+        margin-right: 1.5em;
+        transition: transform $transicionbase;
+
+        &:hover {
+            transform: scale(1.3);
+        }
+    }
+
+    .footer-categorias {
+        display: flex;
+        flex-direction: column;
+        text-align: left;
+        padding-left: 40%;
+
+        ul li a {
+            color: $blanco;
+            line-height: 2em;
+            transition: color $transicionbase;
+
+            &:hover { color: $resaltado; }
+        }
+    }
+
+    span.material-symbols-outlined {
+        font-size: 1em;
+    }
+
+    .contacto img {
+        width: 70%;
+        border-radius: 20px;
+        margin-top: 1em;
+    }
+
+    .aviso-legal {
+        display: flex;
+        justify-content: space-between;
+        margin-top: 2em;
+        border-top: 1px solid #37312d;
+        font-size: 0.8em;
+        padding: 1em 17%;
+
+        .avisos-derecha {
+            display: flex;
+            gap: 1em;
+        }
+    }
+
+    a:hover {
+        color: $resaltado;
+    }
+}

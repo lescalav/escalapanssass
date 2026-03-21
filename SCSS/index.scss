@@ -1,0 +1,96 @@
+@use 'styles.scss' as *;
+
+/*
+    Estilos de index.html
+*/
+
+
+/* ==== IMAGEN CENTRAL ====*/
+
+.imagen-central {
+    height: fit-content;
+    padding: 5%;
+    background-image:
+        linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)),
+        url('#{$rutaimg}cocina.png');
+    background-size: cover;
+    background-position: center;
+    display: flex;
+    justify-content: center;
+
+    div {
+        width: 30%;
+        color: $blanco;
+    }
+
+     p {
+        font-weight: 200;
+        line-height: 1.5em;
+    }
+
+    button { margin-top: 20px; }
+}
+
+
+/* ==== ESTRUCTURA GENERAL ====*/
+
+.index-main {
+    display: flex;
+    flex-direction: column;
+    align-items: stretch;
+}
+
+/* ==== TARJETAS DE CATEGORÍAS ====*/
+
+.categorias {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    margin-top: 40px;
+    margin-bottom: 40px;
+    gap: 15px;
+    width: 100%;
+
+    article {
+        border-radius: 15px;
+        height: 200px;
+        color: $blanco;
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-end;
+        align-items: flex-start;
+        padding: 3%;
+
+        h2, p {
+            margin: 0;
+            padding: 0;
+            line-height: 1.5em;
+        }
+    }
+
+}
+
+/* ==== DIRECTIVA MIXIN CON ARGUMENTO ====*/
+
+@mixin tipo_sartenes($nombrepng) {
+    background-image:
+        linear-gradient(to top, rgba(0, 0, 0, 0.4) 0%, rgba(0, 0, 0, 0) 100%),
+        url('#{$rutaimg}#{$nombrepng}');
+    background-size: cover;
+    background-position: center;
+}
+
+#antiadherentes {
+    @include tipo_sartenes('antiadherente.png');
+}
+
+#acero-inoxidable {
+    @include tipo_sartenes('inox2.png');
+}
+
+#hierro-fundido {
+    @include tipo_sartenes('hierro2.png');
+}
+
+#wok {
+    @include tipo_sartenes('wok.png');
+}
