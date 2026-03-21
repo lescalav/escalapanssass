@@ -15,9 +15,7 @@
 }
 
 .catalogo-completo {
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    gap: 2em;
+    @include grid-columnas(3);
     margin-bottom: 40px;
     
     article {
@@ -71,9 +69,9 @@
 }
 
 /* ==== ETIQUETAS ====*/
-/* ==== USO DE UN PLACEHOLDER Y DIRECTIVA EXTEND ====*/
+/* ==== USO DE MIXIN CON IF Y DIRECTIVA EXTEND ====*/
 
-%etiqueta-base {
+@mixin etiqueta($color) {
     font-family: 'League Spartan', sans-serif;
     font-weight: 600;
     letter-spacing: 0.1dvh;
@@ -84,44 +82,36 @@
     padding: 0.5em 1em;
     border-radius: 12px;
     text-transform: uppercase;
+
+    @if $color == azul {
+        background-color: #635bff;
+    } @else if $color == amarilla {
+        background-color: #F9A825;
+    } @else if $color == verde {
+        background-color: $verde;
+    } @else if $color == morada {
+        background-color: #8E24AA;
+    } @else if $color == naranja {
+        background-color: $resaltado;
+    } @else if $color == gris {
+        background-color: #8E939E;
+    } @else if $color == roja {
+        background-color: #DC2626;
+    }
 }
 
 .producto-imagen {
-    .etiqueta {
-        @extend %etiqueta-base;
-    }
-
     .izquierda { left: 5%; }
     .derecha   { right: 5%; }
 }
 
-.etiqueta-azul {
-    background-color: #635bff;
-}
-
-.etiqueta-amarilla {
-    background-color: #F9A825;
-}
-
-.etiqueta-verde {
-    background-color: $verde;
-}
-
-.etiqueta-morada {
-    background-color: #8E24AA;
-}
-
-.etiqueta-naranja {
-    background-color: $resaltado;
-}
-
-.etiqueta-gris {
-    background-color: #8E939E;
-}
-
-.etiqueta-roja {
-    background-color: #DC2626;
-}
+.etiqueta-azul    { @include etiqueta(azul); }
+.etiqueta-amarilla { @include etiqueta(amarilla); }
+.etiqueta-verde   { @include etiqueta(verde); }
+.etiqueta-morada  { @include etiqueta(morada); }
+.etiqueta-naranja { @include etiqueta(naranja); }
+.etiqueta-gris    { @include etiqueta(gris); }
+.etiqueta-roja    { @include etiqueta(roja); }
 
 /* ==== CARACTERÍSTICAS LISTA ====*/
 

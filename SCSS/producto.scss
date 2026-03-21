@@ -29,10 +29,8 @@
 }
 
 .miniaturas {
+    @include grid-columnas(4); 
     width: 80%;
-    display: grid;
-    grid-template-columns: repeat(4, 1fr);
-    gap: 2%;
     margin-top: 2%;
 
     img {
@@ -92,8 +90,7 @@
 }
 
 .especificaciones-tecnicas ul {
-    display: grid;
-    grid-template-columns: repeat(2, 1fr);
+    @include grid-columnas(2, 1em);
     padding-left: 1em;
 }
 
@@ -120,9 +117,7 @@
 /* ==== INSTRUCCIONES DE CUIDADO ====*/
 
 .lista-cuidados {
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    gap: 1em;
+    @include grid-columnas(3, 1em);
     list-style: none;
     padding: 0;
     margin-top: 2%;

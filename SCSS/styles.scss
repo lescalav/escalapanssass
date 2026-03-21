@@ -96,6 +96,14 @@ address {
     font-style: normal;
 }
 
+/* ==== @MIXIN PARA LOS GRIDS ====*/
+
+@mixin grid-columnas($columnas, $espaciado-grid: 2em) {
+    display: grid;
+    grid-template-columns: repeat($columnas, 1fr);
+    gap: $espaciado-grid;
+}
+
 /* ==== ESTRUCTURA GLOBAL ====*/
 
 main {
@@ -345,12 +353,10 @@ footer {
     }
 
     .informacion {
-        display: grid;
-        grid-template-columns: repeat(3, 1fr);
+        @include grid-columnas(1, 2em);
         padding: 2% 17%;
         align-items: start;
         font-size: 0.9em;
-        gap: 2em;
     }
 
     .redes img {
@@ -406,3 +412,4 @@ footer {
         color: $resaltado;
     }
 }
+
