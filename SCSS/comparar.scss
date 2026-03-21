@@ -1,0 +1,47 @@
+@use 'styles.scss' as *;
+
+/*
+    Estilos del comparador
+    Usado en: comparar.html
+*/
+
+/* === TABLA COMPARATIVA === */
+
+table {
+    width: 100%;
+    text-align: center;
+    border: $bordedefault;
+    margin-bottom: 4%;
+    border-radius: 10px;
+    box-shadow: 0 4px 4px rgba(0,0,0,0.1);
+    overflow: hidden; 
+
+    h4 { margin-bottom: 0; }
+
+    p { margin-top: 0; }
+
+    img {
+        width: 100%;
+        height: auto;
+    }
+}
+
+#tabla-comparativa { table-layout: fixed; }
+
+td {
+    background-color: $blanco;
+    justify-items: center;
+    padding: 2%;
+    vertical-align: middle;
+
+    a { font-weight: 600; }
+} 
+
+tr { border-top: $bordedefault; }
+
+th {
+    font-weight: 600;
+    background-color: #F5F5F4;
+    vertical-align: middle; 
+}
+

@@ -13,7 +13,8 @@ $bordeclaro:       #d9d7d7;
 $transicionbase:   300ms;
 $tipografia:       'Montserrat';
 $rutaimg:          '../images/';
-$bordedefault:     1px solid #{$bordeclaro};  
+$bordedefault:     1px solid #{$bordeclaro};
+$espaciadobase:    0.5em;  
 
 
 /* ==== RESET CSS — Meyer v2.0 ====*/
@@ -142,13 +143,22 @@ button {
 .material-symbols-outlined {
     font-variation-settings: 'FILL' 1;
     vertical-align: middle;
-    padding: 0.5em;
+    padding: $espaciadobase;
     color: $resaltado;
     transition: color $transicionbase;
     &.gray { color: $textosecundario; }
     &.small {
         font-size: 1em;
         padding: 0;
+    }
+    &.tipoboton {
+        color: $blanco;
+        background-color: $resaltado;
+        border-radius: 5px;
+        font-size: 1.5em;
+        padding: 2% 10% 2% 10%;
+        margin-left: 1em;
+        box-shadow: 4px 4px 5px rgba(0,0,0,0.1);
     }
 }
 
@@ -220,11 +230,13 @@ header {
     /* ==== REGLAS ANIDADAS  ====*/
     ul {
         display: flex;
-        gap: 1.5em;
+        gap: 1.5rem;
     }
+    
     a {
     font-weight: 500;
     color: $textosecundario;
+
         &:hover { color: $resaltado }
 
         &.activo {
@@ -239,7 +251,7 @@ header {
 .seleccionar-opciones {
     display: flex;
     align-items: center;
-    gap: 2em;
+    gap: 1.5rem;
 
     button {
     background-color: transparent;

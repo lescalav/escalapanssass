@@ -1,0 +1,112 @@
+
+@use 'styles.scss' as *;
+
+/*
+    Estilos de la tienda
+    Usado en: tienda.html
+*/
+
+// Variables locales para colores
+$diametro-activo-fondo:  #f9e7e2;
+$diametro-label-fondo:   #f7f7f7;
+$diametro-hover-fondo:   #eaeaea;
+$-diametro-borde:        #ccc;
+
+/*=== ESTRUCTURA GENERAL ====*/
+
+.grid-tienda {
+    display: grid;
+    grid-template-columns: 1fr 4fr;
+    gap: 2%;
+}
+
+.filtros-seleccion {
+    background-color: $blanco;
+    padding: 5%;
+    border-radius: 15px;
+    border: $bordedefault;
+    height: fit-content;
+    color: $textosecundario;
+}
+
+.cabecero-filtros {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    
+    h3 {
+        color: $texto;
+    }
+
+    p {
+        font-size: 0.8em;
+        color: $resaltado;
+        font-weight: 600;
+    }
+}
+
+/*=== FILTROS DE ORDENACIÓN ====*/
+
+.opcion {
+    display: flex;
+    gap: $espaciadobase;
+    margin-bottom: 0.5em;
+
+    label {
+        font-size: 0.8em;
+    }
+} 
+
+.filtrar-categorias label {
+    display: block;
+}
+
+/*=== SELECTOR DE DIÁMETRO ====*/
+
+.filtro-diametro {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 2%;
+
+    input[type="radio"] {
+        display: none;
+
+        &:checked + label {
+            border-color: $resaltado;
+            background: $diametro-activo-fondo;
+            color: $resaltado;
+        }
+    }
+
+    label {
+        padding: 0.3em 0.7em;
+        border: 1px solid $-diametro-borde;
+        border-radius: 4px;
+        cursor: pointer;
+        background: $diametro-label-fondo;
+        transition: $transicionbase;
+        font-size: 0.8em;
+        margin-bottom: 2%;
+
+        &:hover {
+            background: $diametro-hover-fondo;
+        }
+    }
+
+}
+
+/*=== SLIDER DE PRECIO ====
+Adaptado de https://www.youtube.com/watch?v=JxEaJNNDP3Y*/
+
+#slider {
+    width: 100%;
+}
+
+.rango {
+    display: flex;
+    justify-content: space-between;
+}
+
+.number {
+    font-size: small;
+}

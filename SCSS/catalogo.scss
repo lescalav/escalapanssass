@@ -5,7 +5,7 @@
     Usado en: index.html, tienda.html
 */
 
-/* ==== ESTRUCTURA GENERAL ====*/
+/* ==== ESTRUCTURA GENERAL Y TARJETAS ====*/
 
 .separador {
     display: flex;
@@ -19,14 +19,12 @@
     grid-template-columns: repeat(3, 1fr);
     gap: 2em;
     margin-bottom: 40px;
-}
-
-/* ==== TARJETA DE PRODUCTO ====*/
-
-.catalogo-completo article {
-    background-color: $blanco;
-    border: $bordedefault;
-    border-radius: 15px;
+    
+    article {
+        background-color: $blanco;
+        border: $bordedefault;
+        border-radius: 15px;
+    }
 }
 
 .producto-imagen {
@@ -37,32 +35,33 @@
     border-radius: 15px 15px 0 0;
     margin: 0;
     position: relative;
-}
-
-.producto-imagen img {
-    width: 60%;
-    padding: 2em 0;
+    
+    img {
+        width: 60%;
+        padding: 2em 0;
+    }
 }
 
 .producto-info {
     padding-left: 1em;
-}
-
-.producto-info h3 {
-    color: $texto;
-    margin: 0;
-    padding-top: 1em;
-}
-
-.producto-info p {
-    color: $textosecundario;
-    padding-top: 0.5em;
-    margin: 0;
+    
+    h3 {
+        color: $texto;
+        margin: 0;
+        padding-top: 1em;
+    }
+    
+    p {
+        color: $textosecundario;
+        padding-top: 0.5em;
+        margin: 0;
+    }
 }
 
 /* ==== ETIQUETAS ====*/
+/* ==== USO DE UN PLACEHOLDER Y DIRECTIVA EXTEND ====*/
 
-.producto-imagen .etiqueta {
+%etiqueta-base {
     font-family: 'League Spartan', sans-serif;
     font-weight: 600;
     letter-spacing: 0.1dvh;
@@ -75,12 +74,13 @@
     text-transform: uppercase;
 }
 
-.producto-imagen .izquierda {
-    left: 5%;
-}
+.producto-imagen {
+    .etiqueta {
+        @extend %etiqueta-base;
+    }
 
-.producto-imagen .derecha {
-    right: 5%;
+    .izquierda { left: 5%; }
+    .derecha   { right: 5%; }
 }
 
 .etiqueta-azul {
@@ -117,13 +117,13 @@
     list-style: none;
     padding: 0;
     margin-top: 0.5em;
-
+    
     span {
         font-size: 1.2em;
         vertical-align: middle;
         padding-left: 0;
     }
-
+    
     li {
         color: $textosecundario;
         line-height: 1.5em;
@@ -139,21 +139,21 @@
     justify-content: space-between;
     align-items: center;
     padding: 15px;
-}
-
-.producto-acciones button {
-    background-color: #FCEDE8;
-    border: none;
-    border-radius: 10px;
-    padding: 0;
-    cursor: pointer;
-    display: flex;
-    justify-content: center;
-}
-
-.producto-acciones button span {
-    color: $resaltado;
-    font-size: 2em;
+    
+    button {
+        background-color: #FCEDE8;
+        border: none;
+        border-radius: 10px;
+        padding: 0;
+        cursor: pointer;
+        display: flex;
+        justify-content: center;
+        
+        span {
+            color: $resaltado;
+            font-size: 2em;
+        }   
+    }
 }
 
 /* ==== PAGINACIÓN ====
@@ -163,28 +163,29 @@ Adaptado de https://codepen.io/marhdev/pen/poyNEay */
     display: flex;
     justify-content: center;
     margin-bottom: 5%;
-}
-
-.paginacion ul {
-    display: flex;
-    gap: 0.5em;
-    padding: 0;
-    margin: 0;
-    list-style: none;
-}
-
-.paginacion li a {
-    display: block;
-    padding: 7px 12px;
-    border: $bordedefault;
-    color: $textosecundario;
-    font-size: 0.9em;
-    font-weight: 600;
-    background-color: $blanco;
-    border-radius: 5px;
-
-    &.active {
-        background-color: $resaltado;
-        color: $blanco;
+    
+    ul {
+        display: flex;
+        gap: 0.5em;
+        padding: 0;
+        margin: 0;
+        list-style: none;
+    }
+    
+    li a {
+        display: block;
+        padding: 7px 12px;
+        border: $bordedefault;
+        color: $textosecundario;
+        font-size: 0.9em;
+        font-weight: 600;
+        background-color: $blanco;
+        border-radius: 5px;
+        
+        &.active {
+            background-color: $resaltado;
+            color: $blanco;
+        }
     }
 }
+
