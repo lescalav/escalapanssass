@@ -52,7 +52,7 @@ function plantillaProducto(producto) {
 }
 
 async function cargarProductos() {
-  const respuesta = await fetch("productos.json");
+  const respuesta = await fetch("data/productos.json");
   const productos = await respuesta.json();
   const contenedor = document.getElementById("productos");
   contenedor.innerHTML = productos.map(plantillaProducto).join("");
