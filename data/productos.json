@@ -1,0 +1,83 @@
+[
+  {
+    "id": 1,
+    "nombre": "Sartén Antiadherente Pro",
+    "categoria": "Antiadherente",
+    "coleccion": "Colección Titanium",
+    "precio": 45.90,
+    "descripcion": "Diseñada para el chef exigente. Nuestra línea Pro combina la durabilidad del aluminio forjado con un recubrimiento de alto rendimiento que garantiza una cocina sin adherencias y una limpieza sin esfuerzo.",
+    "caracteristicas": [
+      "Libre de PFOA",
+      "Triple capa reforzada"
+    ],
+    "imagen": "antiadherente.png",
+    "destacado": "Best Seller"
+  },
+  {
+    "id": 2,
+    "nombre": "Sartén Chef Inox 28cm",
+    "categoria": "Acero Inoxidable",
+    "coleccion": "Serie Master",
+    "precio": 62.50,
+    "descripcion": "Este sartén de acero inoxidable está fabricado con materiales de alta calidad para una durabilidad excepcional. Su diseño ergonómico y su mango resistente al calor lo convierten en una herramienta ideal para cocinar con comodidad y seguridad.",
+    "caracteristicas": [
+      "Acero 18/10",
+      "Apto para horno"
+    ],
+    "imagen": "inox.png"
+  },
+  {
+    "id": 3,
+    "nombre": "Hierro Fundido Tradicional",
+    "categoria": "Hierro Fundido",
+    "coleccion": "Línea Heritage",
+    "precio": 75.00,
+    "descripcion": "Este sartén de hierro fundido tradicional está fabricado con materiales de alta calidad para una durabilidad excepcional. Su diseño clásico y su mango resistente al calor lo convierten en una herramienta ideal para cocinar con comodidad y seguridad.",
+    "caracteristicas": [
+      "Retención de calor superior",
+      "Garantía de por vida"
+    ],
+    "imagen": "hierro.png"
+  },
+  {
+    "id": 4,
+    "nombre": "Wok Oriental Carbón Steel",
+    "categoria": "Wok",
+    "coleccion": "Auténtico Sabor",
+    "precio": 54.20,
+    "descripcion": "Este wok de acero al carbono está fabricado con materiales de alta calidad para una durabilidad excepcional. Su diseño ergonómico y su mango resistente al calor lo convierten en una herramienta ideal para cocinar con comodidad y seguridad.",
+    "caracteristicas": [
+      "Calentamiento rápido",
+      "30cm de diámetro"
+    ],
+    "imagen": "wok.png"
+  },
+  {
+    "id": 5,
+    "nombre": "Cazo de Cobre Premium",
+    "categoria": "Acero Inoxidable",
+    "coleccion": "Auténtico Sabor",
+    "precio": 120.00,
+    "descripcion": "Este cazo de acero inoxidable está fabricado con materiales de alta calidad para una durabilidad excepcional. Su diseño ergonómico y su mango resistente al calor lo convierten en una herramienta ideal para cocinar con comodidad y seguridad.",
+    "caracteristicas": [
+      "Conductividad máxima",
+      "Acabado artesanal"
+    ],
+    "imagen": "cobre.png",
+    "destacado": "Agotado"
+  },
+  {
+    "id": 6,
+    "nombre": "Crepera Antiadherente",
+    "categoria": "Antiadherente",
+    "coleccion": "Especiales",
+    "precio": 27.20,
+    "descripcion": "Esta crepera antiadherente está fabricada con materiales de alta calidad para una durabilidad excepcional.",
+    "caracteristicas": [
+      "Borde bajo",
+      "Reparto de calor uniforme"
+    ],
+    "imagen": "crepera.png",
+    "destacado": "-15%"
+  }
+]
